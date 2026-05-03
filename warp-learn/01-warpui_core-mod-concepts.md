@@ -152,7 +152,7 @@ ViewType::of::<SettingsView>()  ──→ { "toggle": [...] }
 
 ---
 
-## 5. Actions — The Event Dispatch System
+## 5. Actions — The Action Dispatch System
 
 ### Three levels of action handling:
 

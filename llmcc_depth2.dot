@@ -1,0 +1,1167 @@
+digraph architecture {
+  rankdir=TB;
+  ranksep=0.8;
+  nodesep=0.4;
+  splines=ortho;
+  concentrate=true;
+
+  node [shape=box, style="rounded,filled", fillcolor="#f0f0f0", fontname="Helvetica"];
+  edge [color="#888888", arrowsize=0.7];
+
+  labelloc=t;
+  fontsize=16;
+
+  subgraph cluster_ai {
+    label="ai";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_ai_agent[label="agent", path="C:\Users\zhangqiang\warp\crates\ai\src\agent"];
+    mod_ai_diff_validation[label="diff_validation", path="C:\Users\zhangqiang\warp\crates\ai\src\diff_validation"];
+    mod_ai_document[label="document", path=""];
+    mod_ai_index[label="index", path="C:\Users\zhangqiang\warp\crates\ai\src\index"];
+    mod_ai_llm_id[label="llm_id", path=""];
+    mod_ai_project_context[label="project_context", path="C:\Users\zhangqiang\warp\crates\ai\src\project_context"];
+    mod_ai_skills[label="skills", path="C:\Users\zhangqiang\warp\crates\ai\src\skills"];
+  }
+
+  subgraph cluster_channel_versions {
+    label="channel_versions";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_channel_versions_lib[label="lib", path=""];
+  }
+
+  subgraph cluster_command {
+    label="command";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_command_async[label="async", path=""];
+  }
+
+  subgraph cluster_computer_use {
+    label="computer_use";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_computer_use_lib[label="lib", path=""];
+    mod_computer_use_linux[label="linux", path="C:\Users\zhangqiang\warp\crates\computer_use\src\linux"];
+    mod_computer_use_mac[label="mac", path="C:\Users\zhangqiang\warp\crates\computer_use\src\mac"];
+    mod_computer_use_windows[label="windows", path="C:\Users\zhangqiang\warp\crates\computer_use\src\windows"];
+  }
+
+  subgraph cluster_fuzzy_match {
+    label="fuzzy_match";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_fuzzy_match_lib[label="lib", path=""];
+  }
+
+  subgraph cluster_http_client {
+    label="http_client";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_http_client_lib[label="lib", path=""];
+  }
+
+  subgraph cluster_input_classifier {
+    label="input_classifier";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_input_classifier_bin[label="bin", path="C:\Users\zhangqiang\warp\crates\input_classifier\src\bin"];
+  }
+
+  subgraph cluster_integration {
+    label="integration";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_integration_bin[label="bin", path="C:\Users\zhangqiang\warp\crates\integration\src\bin"];
+    mod_integration_test[label="test", path=""];
+  }
+
+  subgraph cluster_languages {
+    label="languages";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_languages_lib[label="lib", path=""];
+  }
+
+  subgraph cluster_lsp {
+    label="lsp";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_lsp_config[label="config", path=""];
+    mod_lsp_model[label="model", path=""];
+    mod_lsp_types[label="types", path=""];
+  }
+
+  subgraph cluster_markdown_parser {
+    label="markdown_parser";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_markdown_parser_html_parser[label="html_parser", path=""];
+    mod_markdown_parser_lib[label="lib", path=""];
+    mod_markdown_parser_markdown_parser[label="markdown_parser", path=""];
+  }
+
+  subgraph cluster_node_runtime {
+    label="node_runtime";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_node_runtime_lib[label="lib", path=""];
+  }
+
+  subgraph cluster_onboarding {
+    label="onboarding";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_onboarding_bin[label="bin", path="C:\Users\zhangqiang\warp\crates\onboarding\src\bin"];
+    mod_onboarding_callout[label="callout", path="C:\Users\zhangqiang\warp\crates\onboarding\src\callout"];
+    mod_onboarding_model[label="model", path=""];
+    mod_onboarding_slides[label="slides", path="C:\Users\zhangqiang\warp\crates\onboarding\src\slides"];
+    mod_onboarding_visuals[label="visuals", path="C:\Users\zhangqiang\warp\crates\onboarding\src\visuals"];
+  }
+
+  subgraph cluster_persistence {
+    label="persistence";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_persistence_model[label="model", path=""];
+  }
+
+  subgraph cluster_remote_server {
+    label="remote_server";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_remote_server_protocol[label="protocol", path=""];
+    mod_remote_server_setup[label="setup", path=""];
+  }
+
+  subgraph cluster_repo_metadata {
+    label="repo_metadata";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_repo_metadata_entry[label="entry", path=""];
+    mod_repo_metadata_file_tree_store[label="file_tree_store", path=""];
+    mod_repo_metadata_file_tree_update[label="file_tree_update", path=""];
+    mod_repo_metadata_local_model[label="local_model", path=""];
+    mod_repo_metadata_repository[label="repository", path=""];
+    mod_repo_metadata_watcher[label="watcher", path=""];
+  }
+
+  subgraph cluster_settings {
+    label="settings";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_settings_lib[label="lib", path=""];
+    mod_settings_macros_tests[label="macros_tests", path=""];
+  }
+
+  subgraph cluster_string_offset {
+    label="string-offset";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_string_offset_lib[label="lib", path=""];
+  }
+
+  subgraph cluster_sum_tree {
+    label="sum_tree";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_sum_tree_cursor[label="cursor", path=""];
+    mod_sum_tree_lib[label="lib", path=""];
+  }
+
+  subgraph cluster_ui_components {
+    label="ui_components";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_ui_components_button[label="button", path=""];
+  }
+
+  subgraph cluster_warp {
+    label="warp";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_ai[label="ai", path="C:\Users\zhangqiang\warp\app\src\ai"];
+    mod_warp_ai_assistant[label="ai_assistant", path="C:\Users\zhangqiang\warp\app\src\ai_assistant"];
+    mod_warp_app_menus[label="app_menus", path=""];
+    mod_warp_app_services[label="app_services", path="C:\Users\zhangqiang\warp\app\src\app_services"];
+    mod_warp_app_state[label="app_state", path=""];
+    mod_warp_auth[label="auth", path="C:\Users\zhangqiang\warp\app\src\auth"];
+    mod_warp_autoupdate[label="autoupdate", path="C:\Users\zhangqiang\warp\app\src\autoupdate"];
+    mod_warp_banner[label="banner", path="C:\Users\zhangqiang\warp\app\src\banner"];
+    mod_warp_bin[label="bin", path="C:\Users\zhangqiang\warp\app\src\bin"];
+    mod_warp_chip_configurator[label="chip_configurator", path="C:\Users\zhangqiang\warp\app\src\chip_configurator"];
+    mod_warp_cloud_object[label="cloud_object", path="C:\Users\zhangqiang\warp\app\src\cloud_object"];
+    mod_warp_code[label="code", path="C:\Users\zhangqiang\warp\app\src\code"];
+    mod_warp_code_review[label="code_review", path="C:\Users\zhangqiang\warp\app\src\code_review"];
+    mod_warp_coding_entrypoints[label="coding_entrypoints", path="C:\Users\zhangqiang\warp\app\src\coding_entrypoints"];
+    mod_warp_completer[label="completer", path="C:\Users\zhangqiang\warp\app\src\completer"];
+    mod_warp_context_chips[label="context_chips", path="C:\Users\zhangqiang\warp\app\src\context_chips"];
+    mod_warp_crash_recovery[label="crash_recovery", path=""];
+    mod_warp_crash_reporting[label="crash_reporting", path="C:\Users\zhangqiang\warp\app\src\crash_reporting"];
+    mod_warp_default_terminal[label="default_terminal", path="C:\Users\zhangqiang\warp\app\src\default_terminal"];
+    mod_warp_drive[label="drive", path="C:\Users\zhangqiang\warp\app\src\drive"];
+    mod_warp_editor[label="editor", path="C:\Users\zhangqiang\warp\app\src\editor"];
+    mod_warp_env_vars[label="env_vars", path="C:\Users\zhangqiang\warp\app\src\env_vars"];
+    mod_warp_input_suggestions[label="input_suggestions", path=""];
+    mod_warp_integration_testing[label="integration_testing", path="C:\Users\zhangqiang\warp\app\src\integration_testing"];
+    mod_warp_launch_configs[label="launch_configs", path="C:\Users\zhangqiang\warp\app\src\launch_configs"];
+    mod_warp_lib[label="lib", path=""];
+    mod_warp_menu[label="menu", path=""];
+    mod_warp_modal[label="modal", path=""];
+    mod_warp_notebooks[label="notebooks", path="C:\Users\zhangqiang\warp\app\src\notebooks"];
+    mod_warp_pane_group[label="pane_group", path="C:\Users\zhangqiang\warp\app\src\pane_group"];
+    mod_warp_persistence[label="persistence", path="C:\Users\zhangqiang\warp\app\src\persistence"];
+    mod_warp_plugin[label="plugin", path="C:\Users\zhangqiang\warp\app\src\plugin"];
+    mod_warp_remote_server[label="remote_server", path="C:\Users\zhangqiang\warp\app\src\remote_server"];
+    mod_warp_resource_center[label="resource_center", path="C:\Users\zhangqiang\warp\app\src\resource_center"];
+    mod_warp_root_view[label="root_view", path=""];
+    mod_warp_search[label="search", path="C:\Users\zhangqiang\warp\app\src\search"];
+    mod_warp_server[label="server", path="C:\Users\zhangqiang\warp\app\src\server"];
+    mod_warp_settings[label="settings", path="C:\Users\zhangqiang\warp\app\src\settings"];
+    mod_warp_settings_view[label="settings_view", path="C:\Users\zhangqiang\warp\app\src\settings_view"];
+    mod_warp_system[label="system", path="C:\Users\zhangqiang\warp\app\src\system"];
+    mod_warp_tab[label="tab", path=""];
+    mod_warp_tab_configs[label="tab_configs", path="C:\Users\zhangqiang\warp\app\src\tab_configs"];
+    mod_warp_terminal[label="terminal", path="C:\Users\zhangqiang\warp\app\src\terminal"];
+    mod_warp_test_util[label="test_util", path="C:\Users\zhangqiang\warp\app\src\test_util"];
+    mod_warp_themes[label="themes", path="C:\Users\zhangqiang\warp\app\src\themes"];
+    mod_warp_tips[label="tips", path="C:\Users\zhangqiang\warp\app\src\tips"];
+    mod_warp_ui_components[label="ui_components", path="C:\Users\zhangqiang\warp\app\src\ui_components"];
+    mod_warp_uri[label="uri", path="C:\Users\zhangqiang\warp\app\src\uri"];
+    mod_warp_user_config[label="user_config", path="C:\Users\zhangqiang\warp\app\src\user_config"];
+    mod_warp_util[label="util", path="C:\Users\zhangqiang\warp\app\src\util"];
+    mod_warp_view_components[label="view_components", path="C:\Users\zhangqiang\warp\app\src\view_components"];
+    mod_warp_voltron[label="voltron", path=""];
+    mod_warp_warp_managed_paths_watcher[label="warp_managed_paths_watcher", path=""];
+    mod_warp_workflows[label="workflows", path="C:\Users\zhangqiang\warp\app\src\workflows"];
+    mod_warp_workspace[label="workspace", path="C:\Users\zhangqiang\warp\app\src\workspace"];
+    mod_warp_workspaces[label="workspaces", path="C:\Users\zhangqiang\warp\app\src\workspaces"];
+  }
+
+  subgraph cluster_warp_cli {
+    label="warp_cli";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_cli_agent[label="agent", path=""];
+    mod_warp_cli_lib[label="lib", path=""];
+    mod_warp_cli_secret[label="secret", path=""];
+    mod_warp_cli_task[label="task", path=""];
+  }
+
+  subgraph cluster_warp_completer {
+    label="warp_completer";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_completer_completer[label="completer", path="C:\Users\zhangqiang\warp\crates\warp_completer\src\completer"];
+    mod_warp_completer_meta[label="meta", path=""];
+    mod_warp_completer_parsers[label="parsers", path="C:\Users\zhangqiang\warp\crates\warp_completer\src\parsers"];
+    mod_warp_completer_signatures[label="signatures", path="C:\Users\zhangqiang\warp\crates\warp_completer\src\signatures"];
+  }
+
+  subgraph cluster_warp_core {
+    label="warp_core";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_core_channel[label="channel", path="C:\Users\zhangqiang\warp\crates\warp_core\src\channel"];
+    mod_warp_core_command[label="command", path=""];
+    mod_warp_core_paths[label="paths", path=""];
+    mod_warp_core_session_id[label="session_id", path=""];
+    mod_warp_core_telemetry[label="telemetry", path=""];
+    mod_warp_core_ui[label="ui", path="C:\Users\zhangqiang\warp\crates\warp_core\src\ui"];
+  }
+
+  subgraph cluster_warp_editor {
+    label="warp_editor";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_editor_content[label="content", path="C:\Users\zhangqiang\warp\crates\editor\src\content"];
+    mod_warp_editor_render[label="render", path="C:\Users\zhangqiang\warp\crates\editor\src\render"];
+    mod_warp_editor_test_data[label="test_data", path="C:\Users\zhangqiang\warp\crates\editor\test_data"];
+  }
+
+  subgraph cluster_warp_files {
+    label="warp_files";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_files_lib[label="lib", path=""];
+  }
+
+  subgraph cluster_warp_graphql {
+    label="warp_graphql";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_graphql_api[label="api", path="C:\Users\zhangqiang\warp\crates\graphql\src\api"];
+    mod_warp_graphql_client[label="client", path=""];
+    mod_warp_graphql_mutations[label="mutations", path="C:\Users\zhangqiang\warp\crates\graphql\src\api\mutations"];
+    mod_warp_graphql_queries[label="queries", path="C:\Users\zhangqiang\warp\crates\graphql\src\api\queries"];
+  }
+
+  subgraph cluster_warp_js {
+    label="warp_js";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_js_js_function[label="js_function", path="C:\Users\zhangqiang\warp\crates\warp_js\src\js_function"];
+  }
+
+  subgraph cluster_warp_logging {
+    label="warp_logging";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_logging_native[label="native", path=""];
+  }
+
+  subgraph cluster_warp_managed_secrets {
+    label="warp_managed_secrets";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_managed_secrets_envelope[label="envelope", path=""];
+  }
+
+  subgraph cluster_warp_server_client {
+    label="warp_server_client";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_server_client_auth[label="auth", path="C:\Users\zhangqiang\warp\crates\warp_server_client\src\auth"];
+    mod_warp_server_client_cloud_object[label="cloud_object", path="C:\Users\zhangqiang\warp\crates\warp_server_client\src\cloud_object"];
+    mod_warp_server_client_drive[label="drive", path="C:\Users\zhangqiang\warp\crates\warp_server_client\src\drive"];
+    mod_warp_server_client_ids[label="ids", path=""];
+  }
+
+  subgraph cluster_warp_terminal {
+    label="warp_terminal";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_terminal_ansi[label="ansi", path="C:\Users\zhangqiang\warp\crates\warp_terminal\src\model\ansi"];
+    mod_warp_terminal_model[label="model", path="C:\Users\zhangqiang\warp\crates\warp_terminal\src\model"];
+    mod_warp_terminal_shell[label="shell", path="C:\Users\zhangqiang\warp\crates\warp_terminal\src\shell"];
+  }
+
+  subgraph cluster_warp_util {
+    label="warp_util";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warp_util_path[label="path", path=""];
+    mod_warp_util_standardized_path[label="standardized_path", path=""];
+  }
+
+  subgraph cluster_warpui {
+    label="warpui";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warpui_fonts[label="fonts", path="C:\Users\zhangqiang\warp\crates\warpui\src\fonts"];
+    mod_warpui_platform[label="platform", path="C:\Users\zhangqiang\warp\crates\warpui\src\platform"];
+    mod_warpui_rendering[label="rendering", path="C:\Users\zhangqiang\warp\crates\warpui\src\rendering"];
+    mod_warpui_windowing[label="windowing", path="C:\Users\zhangqiang\warp\crates\warpui\src\windowing"];
+  }
+
+  subgraph cluster_warpui_core {
+    label="warpui_core";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warpui_core_assets[label="assets", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\assets"];
+    mod_warpui_core_async[label="async", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\async"];
+    mod_warpui_core_clipboard[label="clipboard", path=""];
+    mod_warpui_core_clipboard_utils[label="clipboard_utils", path=""];
+    mod_warpui_core_core[label="core", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\core"];
+    mod_warpui_core_elements[label="elements", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\elements"];
+    mod_warpui_core_event[label="event", path=""];
+    mod_warpui_core_fonts[label="fonts", path=""];
+    mod_warpui_core_image_cache[label="image_cache", path=""];
+    mod_warpui_core_integration[label="integration", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\integration"];
+    mod_warpui_core_keymap[label="keymap", path=""];
+    mod_warpui_core_platform[label="platform", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\platform"];
+    mod_warpui_core_presenter[label="presenter", path=""];
+    mod_warpui_core_rendering[label="rendering", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\rendering"];
+    mod_warpui_core_scene[label="scene", path=""];
+    mod_warpui_core_text[label="text", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\text"];
+    mod_warpui_core_text_layout[label="text_layout", path=""];
+    mod_warpui_core_ui_components[label="ui_components", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\ui_components"];
+    mod_warpui_core_units[label="units", path=""];
+    mod_warpui_core_windowing[label="windowing", path="C:\Users\zhangqiang\warp\crates\warpui_core\src\windowing"];
+  }
+
+  subgraph cluster_warpui_extras {
+    label="warpui_extras";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_warpui_extras_secure_storage[label="secure_storage", path="C:\Users\zhangqiang\warp\crates\warpui_extras\src\secure_storage"];
+    mod_warpui_extras_user_preferences[label="user_preferences", path="C:\Users\zhangqiang\warp\crates\warpui_extras\src\user_preferences"];
+  }
+
+  subgraph cluster_websocket {
+    label="websocket";
+    style=rounded;
+    bgcolor="#f8f8f8";
+
+    mod_websocket_sink_map_err[label="sink_map_err", path=""];
+  }
+
+
+  mod_ai_agent -> mod_ai_document;
+  mod_ai_agent -> mod_lsp_types;
+  mod_ai_agent -> mod_warp_core_command;
+  mod_ai_agent -> mod_warp_editor_test_data;
+  mod_ai_agent -> mod_warp_terminal;
+  mod_ai_agent -> mod_warp_terminal_model;
+  mod_ai_diff_validation -> mod_lsp_types;
+  mod_ai_diff_validation -> mod_warp_editor_test_data;
+  mod_ai_index -> mod_lsp_types;
+  mod_ai_index -> mod_repo_metadata_entry;
+  mod_ai_index -> mod_sum_tree_lib;
+  mod_ai_index -> mod_warp_editor_test_data;
+  mod_ai_index -> mod_warpui_core_core;
+  mod_ai_skills -> mod_lsp_types;
+  mod_ai_skills -> mod_warp_editor_test_data;
+  mod_ai_skills -> mod_warpui_platform;
+  mod_channel_versions_lib -> mod_warp_editor_test_data;
+  mod_computer_use_linux -> mod_computer_use_lib;
+  mod_computer_use_linux -> mod_warp_editor_test_data;
+  mod_computer_use_linux -> mod_warp_terminal;
+  mod_computer_use_mac -> mod_computer_use_lib;
+  mod_computer_use_mac -> mod_warp_editor_test_data;
+  mod_computer_use_windows -> mod_computer_use_lib;
+  mod_computer_use_windows -> mod_warp_editor_test_data;
+  mod_input_classifier_bin -> mod_warp_editor_test_data;
+  mod_input_classifier_bin -> mod_warp_terminal;
+  mod_integration_bin -> mod_integration_test;
+  mod_integration_test -> mod_warp_editor_test_data;
+  mod_integration_test -> mod_warp_integration_testing;
+  mod_integration_test -> mod_warp_terminal_shell;
+  mod_integration_test -> mod_warpui_core_integration;
+  mod_languages_lib -> mod_warp_editor_test_data;
+  mod_lsp_config -> mod_warp_editor_test_data;
+  mod_lsp_config -> mod_warp_terminal;
+  mod_lsp_types -> mod_warp_editor_test_data;
+  mod_markdown_parser_html_parser -> mod_warp_editor_test_data;
+  mod_markdown_parser_lib -> mod_warp_editor_test_data;
+  mod_markdown_parser_markdown_parser -> mod_markdown_parser_lib;
+  mod_markdown_parser_markdown_parser -> mod_warp_completer_parsers;
+  mod_markdown_parser_markdown_parser -> mod_warp_editor_test_data;
+  mod_node_runtime_lib -> mod_warp_editor_test_data;
+  mod_node_runtime_lib -> mod_warp_terminal;
+  mod_onboarding_bin -> mod_warp_core_ui;
+  mod_onboarding_bin -> mod_warpui_core_core;
+  mod_onboarding_bin -> mod_warpui_platform;
+  mod_onboarding_callout -> mod_warpui_core_core;
+  mod_onboarding_model -> mod_onboarding_slides;
+  mod_onboarding_slides -> mod_ai_llm_id;
+  mod_onboarding_slides -> mod_ui_components_button;
+  mod_onboarding_slides -> mod_warp_core_ui;
+  mod_onboarding_slides -> mod_warp_editor_test_data;
+  mod_onboarding_slides -> mod_warp_terminal;
+  mod_onboarding_slides -> mod_warpui_core_core;
+  mod_onboarding_slides -> mod_warpui_core_elements;
+  mod_onboarding_visuals -> mod_warp_editor_test_data;
+  mod_persistence_model -> mod_warp_editor_test_data;
+  mod_remote_server_protocol -> mod_warp_editor_test_data;
+  mod_remote_server_setup -> mod_warp_editor_test_data;
+  mod_repo_metadata_file_tree_store -> mod_repo_metadata_entry;
+  mod_repo_metadata_file_tree_store -> mod_warp_util_standardized_path;
+  mod_repo_metadata_file_tree_update -> mod_repo_metadata_entry;
+  mod_repo_metadata_file_tree_update -> mod_warp_util_standardized_path;
+  mod_repo_metadata_local_model -> mod_repo_metadata_file_tree_store;
+  mod_repo_metadata_watcher -> mod_warpui_core_core;
+  mod_settings_lib -> mod_warp_editor_test_data;
+  mod_settings_macros_tests -> mod_settings_lib;
+  mod_string_offset_lib -> mod_warp_editor;
+  mod_string_offset_lib -> mod_warp_editor_content;
+  mod_warp_ai -> mod_ai_agent;
+  mod_warp_ai -> mod_ai_diff_validation;
+  mod_warp_ai -> mod_ai_document;
+  mod_warp_ai -> mod_ai_llm_id;
+  mod_warp_ai -> mod_ai_skills;
+  mod_warp_ai -> mod_command_async;
+  mod_warp_ai -> mod_http_client_lib;
+  mod_warp_ai -> mod_lsp_types;
+  mod_warp_ai -> mod_markdown_parser_lib;
+  mod_warp_ai -> mod_persistence_model;
+  mod_warp_ai -> mod_repo_metadata_repository;
+  mod_warp_ai -> mod_string_offset_lib;
+  mod_warp_ai -> mod_sum_tree_cursor;
+  mod_warp_ai -> mod_warp_chip_configurator;
+  mod_warp_ai -> mod_warp_cli_agent;
+  mod_warp_ai -> mod_warp_cli_lib;
+  mod_warp_ai -> mod_warp_cli_secret;
+  mod_warp_ai -> mod_warp_cli_task;
+  mod_warp_ai -> mod_warp_cloud_object;
+  mod_warp_ai -> mod_warp_code;
+  mod_warp_ai -> mod_warp_code_review;
+  mod_warp_ai -> mod_warp_context_chips;
+  mod_warp_ai -> mod_warp_core_command;
+  mod_warp_ai -> mod_warp_core_session_id;
+  mod_warp_ai -> mod_warp_core_telemetry;
+  mod_warp_ai -> mod_warp_core_ui;
+  mod_warp_ai -> mod_warp_editor;
+  mod_warp_ai -> mod_warp_editor_test_data;
+  mod_warp_ai -> mod_warp_graphql_api;
+  mod_warp_ai -> mod_warp_graphql_queries;
+  mod_warp_ai -> mod_warp_input_suggestions;
+  mod_warp_ai -> mod_warp_menu;
+  mod_warp_ai -> mod_warp_notebooks;
+  mod_warp_ai -> mod_warp_pane_group;
+  mod_warp_ai -> mod_warp_search;
+  mod_warp_ai -> mod_warp_server;
+  mod_warp_ai -> mod_warp_server_client_cloud_object;
+  mod_warp_ai -> mod_warp_server_client_ids;
+  mod_warp_ai -> mod_warp_settings_view;
+  mod_warp_ai -> mod_warp_terminal;
+  mod_warp_ai -> mod_warp_terminal_model;
+  mod_warp_ai -> mod_warp_terminal_shell;
+  mod_warp_ai -> mod_warp_util;
+  mod_warp_ai -> mod_warp_util_standardized_path;
+  mod_warp_ai -> mod_warp_view_components;
+  mod_warp_ai -> mod_warp_warp_managed_paths_watcher;
+  mod_warp_ai -> mod_warp_workflows;
+  mod_warp_ai -> mod_warp_workspace;
+  mod_warp_ai -> mod_warp_workspaces;
+  mod_warp_ai -> mod_warpui_core_assets;
+  mod_warp_ai -> mod_warpui_core_async;
+  mod_warp_ai -> mod_warpui_core_core;
+  mod_warp_ai -> mod_warpui_core_elements;
+  mod_warp_ai -> mod_warpui_core_fonts;
+  mod_warp_ai -> mod_warpui_core_keymap;
+  mod_warp_ai -> mod_warpui_core_presenter;
+  mod_warp_ai -> mod_warpui_core_scene;
+  mod_warp_ai -> mod_warpui_core_ui_components;
+  mod_warp_ai -> mod_warpui_platform;
+  mod_warp_ai -> mod_warpui_rendering;
+  mod_warp_ai -> mod_warpui_windowing;
+  mod_warp_ai -> mod_websocket_sink_map_err;
+  mod_warp_ai_assistant -> mod_warp_ai;
+  mod_warp_ai_assistant -> mod_warp_editor_test_data;
+  mod_warp_ai_assistant -> mod_warpui_core_core;
+  mod_warp_app_menus -> mod_warp_editor_test_data;
+  mod_warp_app_menus -> mod_warp_menu;
+  mod_warp_app_menus -> mod_warp_terminal;
+  mod_warp_app_menus -> mod_warp_util;
+  mod_warp_app_menus -> mod_warpui_core_core;
+  mod_warp_app_menus -> mod_warpui_core_platform;
+  mod_warp_app_services -> mod_warp_editor_test_data;
+  mod_warp_app_services -> mod_warpui_core_core;
+  mod_warp_app_state -> mod_warp_ai;
+  mod_warp_app_state -> mod_warp_editor_test_data;
+  mod_warp_app_state -> mod_warp_server_client_ids;
+  mod_warp_auth -> mod_warp_core_ui;
+  mod_warp_auth -> mod_warp_editor_test_data;
+  mod_warp_auth -> mod_warp_server;
+  mod_warp_auth -> mod_warp_terminal;
+  mod_warp_auth -> mod_warpui_core_core;
+  mod_warp_auth -> mod_warpui_core_ui_components;
+  mod_warp_autoupdate -> mod_channel_versions_lib;
+  mod_warp_autoupdate -> mod_warp_core_channel;
+  mod_warp_autoupdate -> mod_warp_core_ui;
+  mod_warp_autoupdate -> mod_warp_editor_test_data;
+  mod_warp_autoupdate -> mod_warp_server;
+  mod_warp_autoupdate -> mod_warp_terminal;
+  mod_warp_autoupdate -> mod_warp_util_standardized_path;
+  mod_warp_autoupdate -> mod_warpui_core_core;
+  mod_warp_banner -> mod_warpui_core_core;
+  mod_warp_bin -> mod_warp_editor_test_data;
+  mod_warp_bin -> mod_warp_terminal;
+  mod_warp_chip_configurator -> mod_warp_core_ui;
+  mod_warp_chip_configurator -> mod_warp_editor_test_data;
+  mod_warp_chip_configurator -> mod_warp_terminal;
+  mod_warp_cli_agent -> mod_warp_editor_test_data;
+  mod_warp_cli_lib -> mod_warp_editor_test_data;
+  mod_warp_cli_secret -> mod_warp_editor_test_data;
+  mod_warp_cli_task -> mod_warp_editor_test_data;
+  mod_warp_cloud_object -> mod_warp_drive;
+  mod_warp_cloud_object -> mod_warp_editor_test_data;
+  mod_warp_cloud_object -> mod_warp_graphql_api;
+  mod_warp_cloud_object -> mod_warp_server;
+  mod_warp_cloud_object -> mod_warp_server_client_cloud_object;
+  mod_warp_cloud_object -> mod_warp_server_client_ids;
+  mod_warp_cloud_object -> mod_warp_util;
+  mod_warp_cloud_object -> mod_warpui_core_core;
+  mod_warp_cloud_object -> mod_warpui_platform;
+  mod_warp_code -> mod_lsp_model;
+  mod_warp_code -> mod_lsp_types;
+  mod_warp_code -> mod_repo_metadata_file_tree_store;
+  mod_warp_code -> mod_string_offset_lib;
+  mod_warp_code -> mod_warp_ai;
+  mod_warp_code -> mod_warp_code_review;
+  mod_warp_code -> mod_warp_core_ui;
+  mod_warp_code -> mod_warp_drive;
+  mod_warp_code -> mod_warp_editor;
+  mod_warp_code -> mod_warp_editor_content;
+  mod_warp_code -> mod_warp_editor_render;
+  mod_warp_code -> mod_warp_editor_test_data;
+  mod_warp_code -> mod_warp_notebooks;
+  mod_warp_code -> mod_warp_pane_group;
+  mod_warp_code -> mod_warp_util_standardized_path;
+  mod_warp_code -> mod_warp_view_components;
+  mod_warp_code -> mod_warpui_core_core;
+  mod_warp_code -> mod_warpui_core_elements;
+  mod_warp_code -> mod_warpui_core_units;
+  mod_warp_code -> mod_warpui_platform;
+  mod_warp_code -> mod_warpui_windowing;
+  mod_warp_code_review -> mod_markdown_parser_lib;
+  mod_warp_code_review -> mod_warp_ai;
+  mod_warp_code_review -> mod_warp_code;
+  mod_warp_code_review -> mod_warp_core_ui;
+  mod_warp_code_review -> mod_warp_editor_test_data;
+  mod_warp_code_review -> mod_warp_pane_group;
+  mod_warp_code_review -> mod_warp_settings_view;
+  mod_warp_code_review -> mod_warp_terminal;
+  mod_warp_code_review -> mod_warp_util;
+  mod_warp_code_review -> mod_warp_view_components;
+  mod_warp_code_review -> mod_warpui_core_async;
+  mod_warp_code_review -> mod_warpui_core_core;
+  mod_warp_code_review -> mod_warpui_core_elements;
+  mod_warp_code_review -> mod_warpui_platform;
+  mod_warp_code_review -> mod_warpui_windowing;
+  mod_warp_coding_entrypoints -> mod_warp_editor_test_data;
+  mod_warp_coding_entrypoints -> mod_warpui_core_core;
+  mod_warp_completer -> mod_warp_completer_completer;
+  mod_warp_completer_completer -> mod_command_async;
+  mod_warp_completer_completer -> mod_string_offset_lib;
+  mod_warp_completer_completer -> mod_warp_completer_meta;
+  mod_warp_completer_completer -> mod_warp_completer_parsers;
+  mod_warp_completer_completer -> mod_warp_completer_signatures;
+  mod_warp_completer_completer -> mod_warp_editor_test_data;
+  mod_warp_completer_completer -> mod_warp_terminal;
+  mod_warp_completer_parsers -> mod_string_offset_lib;
+  mod_warp_completer_parsers -> mod_warp_completer_meta;
+  mod_warp_completer_parsers -> mod_warp_completer_signatures;
+  mod_warp_completer_parsers -> mod_warp_editor_test_data;
+  mod_warp_completer_parsers -> mod_warp_util_path;
+  mod_warp_completer_signatures -> mod_warp_editor_test_data;
+  mod_warp_context_chips -> mod_ai_document;
+  mod_warp_context_chips -> mod_warp_completer;
+  mod_warp_context_chips -> mod_warp_core_ui;
+  mod_warp_context_chips -> mod_warp_editor_test_data;
+  mod_warp_context_chips -> mod_warp_settings_view;
+  mod_warp_context_chips -> mod_warp_terminal;
+  mod_warp_context_chips -> mod_warpui_core_core;
+  mod_warp_context_chips -> mod_warpui_core_elements;
+  mod_warp_core_paths -> mod_warp_editor_test_data;
+  mod_warp_core_ui -> mod_warp_editor_test_data;
+  mod_warp_core_ui -> mod_warp_terminal;
+  mod_warp_core_ui -> mod_warpui_core_fonts;
+  mod_warp_crash_recovery -> mod_warp_cli_lib;
+  mod_warp_crash_reporting -> mod_warp_editor_test_data;
+  mod_warp_crash_reporting -> mod_warp_terminal;
+  mod_warp_crash_reporting -> mod_warpui_core_core;
+  mod_warp_default_terminal -> mod_warp_editor_test_data;
+  mod_warp_drive -> mod_warp_cloud_object;
+  mod_warp_drive -> mod_warp_core_ui;
+  mod_warp_drive -> mod_warp_editor_test_data;
+  mod_warp_drive -> mod_warp_graphql_api;
+  mod_warp_drive -> mod_warp_server_client_cloud_object;
+  mod_warp_drive -> mod_warp_server_client_drive;
+  mod_warp_drive -> mod_warp_server_client_ids;
+  mod_warp_drive -> mod_warp_terminal;
+  mod_warp_drive -> mod_warp_ui_components;
+  mod_warp_drive -> mod_warp_workflows;
+  mod_warp_drive -> mod_warp_workspaces;
+  mod_warp_drive -> mod_warpui_core_core;
+  mod_warp_drive -> mod_warpui_core_elements;
+  mod_warp_drive -> mod_warpui_core_ui_components;
+  mod_warp_drive -> mod_warpui_windowing;
+  mod_warp_editor -> mod_lsp_types;
+  mod_warp_editor -> mod_string_offset_lib;
+  mod_warp_editor -> mod_sum_tree_lib;
+  mod_warp_editor -> mod_warp_ai;
+  mod_warp_editor -> mod_warp_core_ui;
+  mod_warp_editor -> mod_warp_editor_test_data;
+  mod_warp_editor -> mod_warp_terminal;
+  mod_warp_editor -> mod_warp_terminal_model;
+  mod_warp_editor -> mod_warpui_core_core;
+  mod_warp_editor -> mod_warpui_core_elements;
+  mod_warp_editor -> mod_warpui_core_fonts;
+  mod_warp_editor -> mod_warpui_core_text;
+  mod_warp_editor -> mod_warpui_core_text_layout;
+  mod_warp_editor -> mod_warpui_rendering;
+  mod_warp_editor_content -> mod_lsp_types;
+  mod_warp_editor_content -> mod_markdown_parser_lib;
+  mod_warp_editor_content -> mod_string_offset_lib;
+  mod_warp_editor_content -> mod_sum_tree_lib;
+  mod_warp_editor_content -> mod_warp_editor_render;
+  mod_warp_editor_content -> mod_warp_editor_test_data;
+  mod_warp_editor_content -> mod_warp_terminal;
+  mod_warp_editor_content -> mod_warpui_core_assets;
+  mod_warp_editor_content -> mod_warpui_core_core;
+  mod_warp_editor_content -> mod_warpui_core_elements;
+  mod_warp_editor_render -> mod_lsp_types;
+  mod_warp_editor_render -> mod_string_offset_lib;
+  mod_warp_editor_render -> mod_warp_editor_content;
+  mod_warp_editor_render -> mod_warp_editor_test_data;
+  mod_warp_editor_render -> mod_warp_terminal_model;
+  mod_warp_editor_render -> mod_warpui_core_core;
+  mod_warp_editor_render -> mod_warpui_core_elements;
+  mod_warp_editor_render -> mod_warpui_core_fonts;
+  mod_warp_editor_render -> mod_warpui_core_text_layout;
+  mod_warp_editor_render -> mod_warpui_core_units;
+  mod_warp_editor_render -> mod_warpui_rendering;
+  mod_warp_editor_test_data -> mod_warp_ai;
+  mod_warp_editor_test_data -> mod_warp_code;
+  mod_warp_editor_test_data -> mod_warp_pane_group;
+  mod_warp_editor_test_data -> mod_warp_search;
+  mod_warp_editor_test_data -> mod_warp_terminal;
+  mod_warp_editor_test_data -> mod_warpui_core_core;
+  mod_warp_editor_test_data -> mod_warpui_core_platform;
+  mod_warp_editor_test_data -> mod_warpui_rendering;
+  mod_warp_env_vars -> mod_warp_editor_test_data;
+  mod_warp_env_vars -> mod_warp_pane_group;
+  mod_warp_env_vars -> mod_warp_server_client_ids;
+  mod_warp_env_vars -> mod_warpui_core_core;
+  mod_warp_files_lib -> mod_warpui_core_core;
+  mod_warp_graphql_api -> mod_warp_editor_test_data;
+  mod_warp_graphql_client -> mod_warp_editor_test_data;
+  mod_warp_graphql_mutations -> mod_warp_editor_test_data;
+  mod_warp_graphql_mutations -> mod_warp_graphql_api;
+  mod_warp_graphql_mutations -> mod_warp_graphql_queries;
+  mod_warp_graphql_queries -> mod_warp_editor_test_data;
+  mod_warp_graphql_queries -> mod_warp_graphql_api;
+  mod_warp_input_suggestions -> mod_warp_ai;
+  mod_warp_input_suggestions -> mod_warp_completer_completer;
+  mod_warp_input_suggestions -> mod_warp_editor_test_data;
+  mod_warp_input_suggestions -> mod_warp_terminal;
+  mod_warp_input_suggestions -> mod_warpui_core_core;
+  mod_warp_integration_testing -> mod_warp_ai;
+  mod_warp_integration_testing -> mod_warp_editor_test_data;
+  mod_warp_integration_testing -> mod_warp_notebooks;
+  mod_warp_integration_testing -> mod_warp_pane_group;
+  mod_warp_integration_testing -> mod_warp_search;
+  mod_warp_integration_testing -> mod_warp_settings_view;
+  mod_warp_integration_testing -> mod_warp_terminal;
+  mod_warp_integration_testing -> mod_warpui_core_core;
+  mod_warp_integration_testing -> mod_warpui_core_integration;
+  mod_warp_integration_testing -> mod_warpui_platform;
+  mod_warp_integration_testing -> mod_warpui_windowing;
+  mod_warp_launch_configs -> mod_warp_app_state;
+  mod_warp_launch_configs -> mod_warp_editor_test_data;
+  mod_warp_launch_configs -> mod_warpui_core_core;
+  mod_warp_lib -> mod_warp_editor_test_data;
+  mod_warp_lib -> mod_warp_settings;
+  mod_warp_lib -> mod_warp_terminal;
+  mod_warp_lib -> mod_warpui_core_core;
+  mod_warp_logging_native -> mod_warp_editor_test_data;
+  mod_warp_logging_native -> mod_warp_terminal;
+  mod_warp_managed_secrets_envelope -> mod_warp_editor_test_data;
+  mod_warp_menu -> mod_warp_editor_test_data;
+  mod_warp_menu -> mod_warpui_core_core;
+  mod_warp_menu -> mod_warpui_core_elements;
+  mod_warp_modal -> mod_warp_settings_view;
+  mod_warp_modal -> mod_warpui_core_core;
+  mod_warp_notebooks -> mod_string_offset_lib;
+  mod_warp_notebooks -> mod_warp_cloud_object;
+  mod_warp_notebooks -> mod_warp_core_ui;
+  mod_warp_notebooks -> mod_warp_drive;
+  mod_warp_notebooks -> mod_warp_editor;
+  mod_warp_notebooks -> mod_warp_editor_content;
+  mod_warp_notebooks -> mod_warp_editor_render;
+  mod_warp_notebooks -> mod_warp_editor_test_data;
+  mod_warp_notebooks -> mod_warp_graphql_api;
+  mod_warp_notebooks -> mod_warp_pane_group;
+  mod_warp_notebooks -> mod_warp_server_client_ids;
+  mod_warp_notebooks -> mod_warp_settings_view;
+  mod_warp_notebooks -> mod_warp_terminal;
+  mod_warp_notebooks -> mod_warp_util;
+  mod_warp_notebooks -> mod_warp_util_path;
+  mod_warp_notebooks -> mod_warp_workflows;
+  mod_warp_notebooks -> mod_warpui_core_core;
+  mod_warp_notebooks -> mod_warpui_core_units;
+  mod_warp_notebooks -> mod_warpui_platform;
+  mod_warp_notebooks -> mod_warpui_rendering;
+  mod_warp_notebooks -> mod_warpui_windowing;
+  mod_warp_pane_group -> mod_warp_ai;
+  mod_warp_pane_group -> mod_warp_code_review;
+  mod_warp_pane_group -> mod_warp_core_ui;
+  mod_warp_pane_group -> mod_warp_drive;
+  mod_warp_pane_group -> mod_warp_editor_test_data;
+  mod_warp_pane_group -> mod_warp_notebooks;
+  mod_warp_pane_group -> mod_warp_server;
+  mod_warp_pane_group -> mod_warp_settings_view;
+  mod_warp_pane_group -> mod_warp_terminal;
+  mod_warp_pane_group -> mod_warp_workflows;
+  mod_warp_pane_group -> mod_warp_workspace;
+  mod_warp_pane_group -> mod_warpui_core_core;
+  mod_warp_pane_group -> mod_warpui_core_elements;
+  mod_warp_persistence -> mod_ai_project_context;
+  mod_warp_persistence -> mod_persistence_model;
+  mod_warp_persistence -> mod_warp_ai;
+  mod_warp_persistence -> mod_warp_app_state;
+  mod_warp_persistence -> mod_warp_cloud_object;
+  mod_warp_persistence -> mod_warp_editor_test_data;
+  mod_warp_persistence -> mod_warp_server_client_cloud_object;
+  mod_warp_persistence -> mod_warp_server_client_ids;
+  mod_warp_persistence -> mod_warp_settings_view;
+  mod_warp_persistence -> mod_warp_terminal;
+  mod_warp_persistence -> mod_warp_util;
+  mod_warp_persistence -> mod_warp_workspaces;
+  mod_warp_persistence -> mod_warpui_core_core;
+  mod_warp_plugin -> mod_warp_editor_test_data;
+  mod_warp_plugin -> mod_warp_js_js_function;
+  mod_warp_plugin -> mod_warp_terminal;
+  mod_warp_remote_server -> mod_warp_terminal;
+  mod_warp_resource_center -> mod_warp_core_ui;
+  mod_warp_resource_center -> mod_warp_editor_test_data;
+  mod_warp_resource_center -> mod_warpui_core_core;
+  mod_warp_resource_center -> mod_warpui_core_elements;
+  mod_warp_root_view -> mod_warp_drive;
+  mod_warp_root_view -> mod_warp_editor_test_data;
+  mod_warp_root_view -> mod_warp_server;
+  mod_warp_root_view -> mod_warp_settings;
+  mod_warp_root_view -> mod_warp_settings_view;
+  mod_warp_root_view -> mod_warp_util;
+  mod_warp_root_view -> mod_warpui_core_core;
+  mod_warp_search -> mod_fuzzy_match_lib;
+  mod_warp_search -> mod_string_offset_lib;
+  mod_warp_search -> mod_warp_ai;
+  mod_warp_search -> mod_warp_cloud_object;
+  mod_warp_search -> mod_warp_completer_parsers;
+  mod_warp_search -> mod_warp_core_ui;
+  mod_warp_search -> mod_warp_editor_test_data;
+  mod_warp_search -> mod_warp_graphql_api;
+  mod_warp_search -> mod_warp_launch_configs;
+  mod_warp_search -> mod_warp_server;
+  mod_warp_search -> mod_warp_server_client_ids;
+  mod_warp_search -> mod_warp_settings_view;
+  mod_warp_search -> mod_warp_terminal;
+  mod_warp_search -> mod_warp_terminal_model;
+  mod_warp_search -> mod_warp_ui_components;
+  mod_warp_search -> mod_warp_util;
+  mod_warp_search -> mod_warp_util_path;
+  mod_warp_search -> mod_warp_workflows;
+  mod_warp_search -> mod_warpui_core_core;
+  mod_warp_search -> mod_warpui_core_elements;
+  mod_warp_search -> mod_warpui_core_keymap;
+  mod_warp_search -> mod_warpui_core_scene;
+  mod_warp_server -> mod_http_client_lib;
+  mod_warp_server -> mod_warp_ai;
+  mod_warp_server -> mod_warp_auth;
+  mod_warp_server -> mod_warp_cloud_object;
+  mod_warp_server -> mod_warp_drive;
+  mod_warp_server -> mod_warp_editor_test_data;
+  mod_warp_server -> mod_warp_graphql_api;
+  mod_warp_server -> mod_warp_notebooks;
+  mod_warp_server -> mod_warp_pane_group;
+  mod_warp_server -> mod_warp_server_client_auth;
+  mod_warp_server -> mod_warp_server_client_cloud_object;
+  mod_warp_server -> mod_warp_server_client_ids;
+  mod_warp_server -> mod_warp_settings;
+  mod_warp_server -> mod_warp_settings_view;
+  mod_warp_server -> mod_warp_terminal;
+  mod_warp_server -> mod_warp_util;
+  mod_warp_server -> mod_warp_workflows;
+  mod_warp_server -> mod_warp_workspace;
+  mod_warp_server -> mod_warpui_core_core;
+  mod_warp_server -> mod_warpui_platform;
+  mod_warp_server_client_cloud_object -> mod_warp_editor_test_data;
+  mod_warp_server_client_cloud_object -> mod_warp_graphql_api;
+  mod_warp_server_client_cloud_object -> mod_warp_server_client_ids;
+  mod_warp_server_client_ids -> mod_warp_editor_test_data;
+  mod_warp_settings -> mod_warp_ai;
+  mod_warp_settings -> mod_warp_editor_test_data;
+  mod_warp_settings -> mod_warp_server_client_ids;
+  mod_warp_settings -> mod_warp_settings_view;
+  mod_warp_settings -> mod_warp_terminal;
+  mod_warp_settings -> mod_warpui_core_core;
+  mod_warp_settings -> mod_warpui_platform;
+  mod_warp_settings_view -> mod_warp_ai;
+  mod_warp_settings_view -> mod_warp_core_ui;
+  mod_warp_settings_view -> mod_warp_editor;
+  mod_warp_settings_view -> mod_warp_editor_test_data;
+  mod_warp_settings_view -> mod_warp_modal;
+  mod_warp_settings_view -> mod_warp_pane_group;
+  mod_warp_settings_view -> mod_warp_search;
+  mod_warp_settings_view -> mod_warp_server;
+  mod_warp_settings_view -> mod_warp_server_client_auth;
+  mod_warp_settings_view -> mod_warp_server_client_ids;
+  mod_warp_settings_view -> mod_warp_settings;
+  mod_warp_settings_view -> mod_warp_terminal;
+  mod_warp_settings_view -> mod_warp_util;
+  mod_warp_settings_view -> mod_warp_view_components;
+  mod_warp_settings_view -> mod_warp_workspace;
+  mod_warp_settings_view -> mod_warp_workspaces;
+  mod_warp_settings_view -> mod_warpui_core_core;
+  mod_warp_settings_view -> mod_warpui_core_elements;
+  mod_warp_settings_view -> mod_warpui_core_keymap;
+  mod_warp_settings_view -> mod_warpui_core_ui_components;
+  mod_warp_settings_view -> mod_warpui_platform;
+  mod_warp_system -> mod_warp_editor_test_data;
+  mod_warp_system -> mod_warpui_core_core;
+  mod_warp_tab -> mod_warp_core_ui;
+  mod_warp_tab_configs -> mod_warp_app_state;
+  mod_warp_tab_configs -> mod_warp_core_ui;
+  mod_warp_tab_configs -> mod_warp_editor_test_data;
+  mod_warp_tab_configs -> mod_warp_settings_view;
+  mod_warp_tab_configs -> mod_warp_terminal;
+  mod_warp_tab_configs -> mod_warp_view_components;
+  mod_warp_tab_configs -> mod_warpui_core_core;
+  mod_warp_terminal -> mod_ai_document;
+  mod_warp_terminal -> mod_ai_llm_id;
+  mod_warp_terminal -> mod_ai_skills;
+  mod_warp_terminal -> mod_command_async;
+  mod_warp_terminal -> mod_fuzzy_match_lib;
+  mod_warp_terminal -> mod_lsp_types;
+  mod_warp_terminal -> mod_string_offset_lib;
+  mod_warp_terminal -> mod_sum_tree_cursor;
+  mod_warp_terminal -> mod_sum_tree_lib;
+  mod_warp_terminal -> mod_ui_components_button;
+  mod_warp_terminal -> mod_warp_ai;
+  mod_warp_terminal -> mod_warp_auth;
+  mod_warp_terminal -> mod_warp_cli_agent;
+  mod_warp_terminal -> mod_warp_code;
+  mod_warp_terminal -> mod_warp_code_review;
+  mod_warp_terminal -> mod_warp_completer;
+  mod_warp_terminal -> mod_warp_completer_completer;
+  mod_warp_terminal -> mod_warp_completer_parsers;
+  mod_warp_terminal -> mod_warp_core_command;
+  mod_warp_terminal -> mod_warp_core_session_id;
+  mod_warp_terminal -> mod_warp_core_ui;
+  mod_warp_terminal -> mod_warp_editor;
+  mod_warp_terminal -> mod_warp_editor_test_data;
+  mod_warp_terminal -> mod_warp_graphql_api;
+  mod_warp_terminal -> mod_warp_input_suggestions;
+  mod_warp_terminal -> mod_warp_pane_group;
+  mod_warp_terminal -> mod_warp_search;
+  mod_warp_terminal -> mod_warp_server;
+  mod_warp_terminal -> mod_warp_server_client_auth;
+  mod_warp_terminal -> mod_warp_server_client_ids;
+  mod_warp_terminal -> mod_warp_settings;
+  mod_warp_terminal -> mod_warp_settings_view;
+  mod_warp_terminal -> mod_warp_terminal_ansi;
+  mod_warp_terminal -> mod_warp_terminal_model;
+  mod_warp_terminal -> mod_warp_terminal_shell;
+  mod_warp_terminal -> mod_warp_util;
+  mod_warp_terminal -> mod_warp_util_path;
+  mod_warp_terminal -> mod_warp_view_components;
+  mod_warp_terminal -> mod_warp_workflows;
+  mod_warp_terminal -> mod_warp_workspace;
+  mod_warp_terminal -> mod_warpui_core_assets;
+  mod_warp_terminal -> mod_warpui_core_async;
+  mod_warp_terminal -> mod_warpui_core_core;
+  mod_warp_terminal -> mod_warpui_core_elements;
+  mod_warp_terminal -> mod_warpui_core_fonts;
+  mod_warp_terminal -> mod_warpui_core_keymap;
+  mod_warp_terminal -> mod_warpui_core_presenter;
+  mod_warp_terminal -> mod_warpui_core_scene;
+  mod_warp_terminal -> mod_warpui_core_text;
+  mod_warp_terminal -> mod_warpui_core_ui_components;
+  mod_warp_terminal -> mod_warpui_core_units;
+  mod_warp_terminal -> mod_warpui_platform;
+  mod_warp_terminal -> mod_warpui_rendering;
+  mod_warp_terminal_model -> mod_lsp_types;
+  mod_warp_terminal_model -> mod_string_offset_lib;
+  mod_warp_terminal_model -> mod_warp_editor_test_data;
+  mod_warp_terminal_model -> mod_warp_terminal;
+  mod_warp_terminal_shell -> mod_warp_editor_test_data;
+  mod_warp_test_util -> mod_warp_editor_test_data;
+  mod_warp_test_util -> mod_warp_terminal;
+  mod_warp_test_util -> mod_warpui_core_core;
+  mod_warp_themes -> mod_warp_core_ui;
+  mod_warp_themes -> mod_warp_editor_test_data;
+  mod_warp_themes -> mod_warp_settings_view;
+  mod_warp_themes -> mod_warp_terminal;
+  mod_warp_themes -> mod_warpui_core_core;
+  mod_warp_tips -> mod_warpui_core_core;
+  mod_warp_ui_components -> mod_warp_core_ui;
+  mod_warp_ui_components -> mod_warp_editor_test_data;
+  mod_warp_ui_components -> mod_warp_search;
+  mod_warp_ui_components -> mod_warp_terminal;
+  mod_warp_ui_components -> mod_warpui_core_core;
+  mod_warp_ui_components -> mod_warpui_core_elements;
+  mod_warp_ui_components -> mod_warpui_core_scene;
+  mod_warp_ui_components -> mod_warpui_core_ui_components;
+  mod_warp_uri -> mod_warp_core_ui;
+  mod_warp_uri -> mod_warp_editor_test_data;
+  mod_warp_uri -> mod_warp_launch_configs;
+  mod_warp_uri -> mod_warpui_core_core;
+  mod_warp_user_config -> mod_warp_editor_test_data;
+  mod_warp_user_config -> mod_warp_launch_configs;
+  mod_warp_user_config -> mod_warp_tab_configs;
+  mod_warp_user_config -> mod_warp_workflows;
+  mod_warp_util -> mod_command_async;
+  mod_warp_util -> mod_lsp_types;
+  mod_warp_util -> mod_warp_ai;
+  mod_warp_util -> mod_warp_cloud_object;
+  mod_warp_util -> mod_warp_core_ui;
+  mod_warp_util -> mod_warp_editor;
+  mod_warp_util -> mod_warp_editor_test_data;
+  mod_warp_util -> mod_warp_settings_view;
+  mod_warp_util -> mod_warp_terminal;
+  mod_warp_util -> mod_warp_terminal_model;
+  mod_warp_util -> mod_warp_terminal_shell;
+  mod_warp_util -> mod_warp_util_path;
+  mod_warp_util -> mod_warpui_core_core;
+  mod_warp_util -> mod_warpui_core_elements;
+  mod_warp_util -> mod_warpui_core_keymap;
+  mod_warp_util -> mod_websocket_sink_map_err;
+  mod_warp_util_path -> mod_warp_editor_test_data;
+  mod_warp_util_path -> mod_warp_terminal;
+  mod_warp_view_components -> mod_warp_core_ui;
+  mod_warp_view_components -> mod_warp_editor_test_data;
+  mod_warp_view_components -> mod_warp_terminal;
+  mod_warp_view_components -> mod_warpui_core_core;
+  mod_warp_view_components -> mod_warpui_core_elements;
+  mod_warp_view_components -> mod_warpui_core_keymap;
+  mod_warp_view_components -> mod_warpui_core_ui_components;
+  mod_warp_voltron -> mod_warpui_core_core;
+  mod_warp_warp_managed_paths_watcher -> mod_repo_metadata_watcher;
+  mod_warp_warp_managed_paths_watcher -> mod_warp_core_paths;
+  mod_warp_warp_managed_paths_watcher -> mod_warpui_core_core;
+  mod_warp_workflows -> mod_warp_cloud_object;
+  mod_warp_workflows -> mod_warp_drive;
+  mod_warp_workflows -> mod_warp_editor_test_data;
+  mod_warp_workflows -> mod_warp_server_client_ids;
+  mod_warp_workflows -> mod_warp_terminal;
+  mod_warp_workflows -> mod_warpui_core_core;
+  mod_warp_workflows -> mod_warpui_core_elements;
+  mod_warp_workspace -> mod_sum_tree_cursor;
+  mod_warp_workspace -> mod_warp_ai;
+  mod_warp_workspace -> mod_warp_chip_configurator;
+  mod_warp_workspace -> mod_warp_context_chips;
+  mod_warp_workspace -> mod_warp_core_ui;
+  mod_warp_workspace -> mod_warp_drive;
+  mod_warp_workspace -> mod_warp_editor;
+  mod_warp_workspace -> mod_warp_editor_test_data;
+  mod_warp_workspace -> mod_warp_pane_group;
+  mod_warp_workspace -> mod_warp_search;
+  mod_warp_workspace -> mod_warp_server;
+  mod_warp_workspace -> mod_warp_settings_view;
+  mod_warp_workspace -> mod_warp_terminal;
+  mod_warp_workspace -> mod_warp_util;
+  mod_warp_workspace -> mod_warp_view_components;
+  mod_warp_workspace -> mod_warp_workspaces;
+  mod_warp_workspace -> mod_warpui_core_core;
+  mod_warp_workspace -> mod_warpui_core_elements;
+  mod_warp_workspaces -> mod_warp_ai;
+  mod_warp_workspaces -> mod_warp_editor_test_data;
+  mod_warp_workspaces -> mod_warp_graphql_api;
+  mod_warp_workspaces -> mod_warp_server;
+  mod_warp_workspaces -> mod_warp_server_client_auth;
+  mod_warp_workspaces -> mod_warp_settings;
+  mod_warp_workspaces -> mod_warpui_core_core;
+  mod_warpui_core_clipboard_utils -> mod_warp_editor_test_data;
+  mod_warpui_core_clipboard_utils -> mod_warpui_core_clipboard;
+  mod_warpui_core_core -> mod_onboarding_slides;
+  mod_warpui_core_core -> mod_warp_ai;
+  mod_warpui_core_core -> mod_warp_auth;
+  mod_warpui_core_core -> mod_warp_code;
+  mod_warpui_core_core -> mod_warp_code_review;
+  mod_warpui_core_core -> mod_warp_coding_entrypoints;
+  mod_warpui_core_core -> mod_warp_drive;
+  mod_warpui_core_core -> mod_warp_editor;
+  mod_warpui_core_core -> mod_warp_editor_test_data;
+  mod_warpui_core_core -> mod_warp_env_vars;
+  mod_warpui_core_core -> mod_warp_notebooks;
+  mod_warpui_core_core -> mod_warp_pane_group;
+  mod_warpui_core_core -> mod_warp_search;
+  mod_warpui_core_core -> mod_warp_settings_view;
+  mod_warpui_core_core -> mod_warp_tab_configs;
+  mod_warpui_core_core -> mod_warp_terminal;
+  mod_warpui_core_core -> mod_warp_themes;
+  mod_warpui_core_core -> mod_warp_view_components;
+  mod_warpui_core_core -> mod_warp_workflows;
+  mod_warpui_core_core -> mod_warp_workspace;
+  mod_warpui_core_core -> mod_warpui_core_async;
+  mod_warpui_core_core -> mod_warpui_core_elements;
+  mod_warpui_core_core -> mod_warpui_core_platform;
+  mod_warpui_core_elements -> mod_lsp_types;
+  mod_warpui_core_elements -> mod_string_offset_lib;
+  mod_warpui_core_elements -> mod_sum_tree_lib;
+  mod_warpui_core_elements -> mod_warp_editor_test_data;
+  mod_warpui_core_elements -> mod_warpui_core_core;
+  mod_warpui_core_elements -> mod_warpui_core_fonts;
+  mod_warpui_core_elements -> mod_warpui_core_image_cache;
+  mod_warpui_core_elements -> mod_warpui_core_presenter;
+  mod_warpui_core_elements -> mod_warpui_core_scene;
+  mod_warpui_core_elements -> mod_warpui_core_text;
+  mod_warpui_core_elements -> mod_warpui_core_text_layout;
+  mod_warpui_core_elements -> mod_warpui_core_units;
+  mod_warpui_core_elements -> mod_warpui_platform;
+  mod_warpui_core_elements -> mod_warpui_rendering;
+  mod_warpui_core_fonts -> mod_warp_editor_test_data;
+  mod_warpui_core_integration -> mod_warp_editor_test_data;
+  mod_warpui_core_integration -> mod_warp_terminal;
+  mod_warpui_core_integration -> mod_warpui_core_core;
+  mod_warpui_core_integration -> mod_warpui_core_platform;
+  mod_warpui_core_keymap -> mod_warp_editor_test_data;
+  mod_warpui_core_keymap -> mod_warpui_core_core;
+  mod_warpui_core_platform -> mod_warp_editor_test_data;
+  mod_warpui_core_presenter -> mod_warp_editor_test_data;
+  mod_warpui_core_presenter -> mod_warpui_core_core;
+  mod_warpui_core_presenter -> mod_warpui_core_scene;
+  mod_warpui_core_presenter -> mod_warpui_core_text_layout;
+  mod_warpui_core_presenter -> mod_warpui_platform;
+  mod_warpui_core_scene -> mod_warp_editor_test_data;
+  mod_warpui_core_text_layout -> mod_warp_editor_test_data;
+  mod_warpui_core_ui_components -> mod_warp_editor_test_data;
+  mod_warpui_core_ui_components -> mod_warpui_core_core;
+  mod_warpui_core_ui_components -> mod_warpui_core_elements;
+  mod_warpui_core_windowing -> mod_warpui_core_core;
+  mod_warpui_extras_secure_storage -> mod_warp_editor_test_data;
+  mod_warpui_extras_secure_storage -> mod_warpui_core_core;
+  mod_warpui_extras_user_preferences -> mod_warp_editor_test_data;
+  mod_warpui_fonts -> mod_warpui_core_fonts;
+  mod_warpui_fonts -> mod_warpui_core_text_layout;
+  mod_warpui_platform -> mod_warp_editor_test_data;
+  mod_warpui_platform -> mod_warp_menu;
+  mod_warpui_platform -> mod_warp_terminal;
+  mod_warpui_platform -> mod_warpui_core_core;
+  mod_warpui_platform -> mod_warpui_core_fonts;
+  mod_warpui_platform -> mod_warpui_core_platform;
+  mod_warpui_platform -> mod_warpui_core_text_layout;
+  mod_warpui_platform -> mod_warpui_rendering;
+  mod_warpui_platform -> mod_warpui_windowing;
+  mod_warpui_rendering -> mod_warp_core_ui;
+  mod_warpui_rendering -> mod_warp_editor;
+  mod_warpui_rendering -> mod_warp_editor_test_data;
+  mod_warpui_rendering -> mod_warp_terminal;
+  mod_warpui_rendering -> mod_warpui_core_platform;
+  mod_warpui_rendering -> mod_warpui_core_rendering;
+  mod_warpui_rendering -> mod_warpui_core_scene;
+  mod_warpui_rendering -> mod_warpui_core_windowing;
+  mod_warpui_rendering -> mod_warpui_platform;
+  mod_warpui_windowing -> mod_command_async;
+  mod_warpui_windowing -> mod_warp_core_ui;
+  mod_warpui_windowing -> mod_warp_editor_test_data;
+  mod_warpui_windowing -> mod_warp_terminal;
+  mod_warpui_windowing -> mod_warpui_core_clipboard;
+  mod_warpui_windowing -> mod_warpui_core_core;
+  mod_warpui_windowing -> mod_warpui_core_event;
+  mod_warpui_windowing -> mod_warpui_core_fonts;
+  mod_warpui_windowing -> mod_warpui_core_platform;
+  mod_warpui_windowing -> mod_warpui_core_text_layout;
+  mod_warpui_windowing -> mod_warpui_platform;
+  mod_warpui_windowing -> mod_warpui_rendering;
+}

@@ -1,0 +1,1413 @@
+digraph architecture {
+  rankdir=TB;
+  ranksep=0.6;
+  nodesep=0.3;
+  splines=ortho;
+  compound=true;
+
+  node [shape=box, style=rounded];
+  edge [arrowsize=0.7];
+
+  subgraph cluster_warp {
+    label="warp";
+    style=rounded;
+        bgcolor="#f8f8f8";
+
+    subgraph cluster_ai {
+      label="ai";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_action_model_rs {
+        label="action_model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n88881[label="BlocklistAIActionModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\action_model.rs:224", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_api_rs {
+        label="api.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n28150[label="ServerConversationToken", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\api.rs:44", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_block_rs {
+        label="block.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n249979[label="AIBlock", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\block.rs:780", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_code_diff_view_rs {
+        label="code_diff_view.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n137807[label="Direction", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\inline_action\\code_diff_view.rs:422", sym_ty="Enum", shape=box];
+        n138076[label="CodeDiffView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\inline_action\\code_diff_view.rs:479", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_context_model_rs {
+        label="context_model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n106831[label="BlocklistAIContextModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\context_model.rs:110", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_controller_rs {
+        label="controller.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n123169[label="AgentViewEntryOrigin", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\agent_view\\controller.rs:104", sym_ty="Enum", shape=box];
+        n123661[label="AgentViewState", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\agent_view\\controller.rs:227", sym_ty="Enum", shape=box];
+        n124178[label="AgentViewController", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\agent_view\\controller.rs:339", sym_ty="Struct", shape=box];
+        n152944[label="BlocklistAIController", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\controller.rs:288", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_conversation_rs {
+        label="conversation.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n123578[label="AIConversation", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\conversation.rs:123", sym_ty="Struct", shape=box];
+        n142013[label="AIConversationId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\conversation.rs:3485", sym_ty="Struct", shape=box];
+        n142894[label="ConversationStatus", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\conversation.rs:3656", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_driver_rs {
+        label="driver.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n85402[label="AgentDriverError", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent_sdk\\driver.rs:344", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_execute_rs {
+        label="execute.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n61909[label="ExecuteActionInput", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\action_model\\execute.rs:120", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_history_model_rs {
+        label="history_model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n105874[label="BlocklistAIHistoryModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\history_model.rs:184", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n58289[label="AIAgentExchangeId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\mod.rs:2774", sym_ty="Struct", shape=box];
+        n58456[label="AIAgentExchange", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\mod.rs:2805", sym_ty="Struct", shape=box];
+        n45580[label="AIAgentActionId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\mod.rs:799", sym_ty="Struct", shape=box];
+        n158926[label="AmbientAgentTaskId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\ambient_agents\\mod.rs:31", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_model_rs {
+        label="model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n74870[label="AIBlockModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\block\\model.rs:153", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_persisted_workspace_rs {
+        label="persisted_workspace.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n82673[label="EnablementState", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\persisted_workspace.rs:57", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_profiles_rs {
+        label="profiles.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n203805[label="ClientProfileId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\execution_profiles\\profiles.rs:36", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_response_stream_rs {
+        label="response_stream.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n39610[label="ResponseStreamId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\blocklist\\controller\\response_stream.rs:22", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_task_rs {
+        label="task.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n140188[label="Task", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\task.rs:171", sym_ty="Struct", shape=box];
+        n139409[label="TaskId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai\\agent\\task.rs:44", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_ai_assistant {
+      label="ai_assistant";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_panel_rs {
+        label="panel.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n213561[label="InputSuggestionsMode", path="C:\\Users\\zhangqiang\\warp\\app\\src\\ai_assistant\\panel.rs:115", sym_ty="Enum", shape=box];
+      }
+
+    }
+
+    subgraph cluster_auth {
+      label="auth";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_auth_state_rs {
+        label="auth_state.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n46316[label="AuthState", path="C:\\Users\\zhangqiang\\warp\\app\\src\\auth\\auth_state.rs:41", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_cloud_object {
+      label="cloud_object";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n171252[label="CloudObject", path="C:\\Users\\zhangqiang\\warp\\app\\src\\cloud_object\\mod.rs:110", sym_ty="Trait", shape=box];
+        n181079[label="Space", path="C:\\Users\\zhangqiang\\warp\\app\\src\\cloud_object\\mod.rs:1507", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_persistence_rs {
+        label="persistence.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n203294[label="CloudModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\cloud_object\\model\\persistence.rs:113", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_code {
+      label="code";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_actions_rs {
+        label="actions.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n205201[label="CodeEditorViewAction", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\editor\\view\\actions.rs:609", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_editor_management_rs {
+        label="editor_management.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n85634[label="CodeSource", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\editor_management.rs:105", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_line_rs {
+        label="line.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n178364[label="EditorLineLocation", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\editor\\line.rs:5", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_local_code_editor_rs {
+        label="local_code_editor.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n94906[label="LocalCodeEditorView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\local_code_editor.rs:268", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n137978[label="ShowCommentEditorProvider", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\mod.rs:42", sym_ty="Trait", shape=box];
+        n138087[label="ShowFindReferencesCardProvider", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\mod.rs:60", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_model_rs {
+        label="model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n88393[label="CodeEditorModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\editor\\model.rs:290", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_view_rs {
+        label="view.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n1237[label="CodeEditorView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\editor\\view.rs:260", sym_ty="Struct", shape=box];
+        n120443[label="FileTreeView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code\\file_tree\\view.rs:247", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_code_review {
+      label="code_review";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_code_review_view_rs {
+        label="code_review_view.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n241075[label="CodeReviewView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code_review\\code_review_view.rs:708", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_comment_rs {
+        label="comment.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n201338[label="CommentId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code_review\\comments\\comment.rs:70", sym_ty="Struct", shape=box];
+        n201508[label="AttachedReviewComment", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code_review\\comments\\comment.rs:96", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_diff_state_rs {
+        label="diff_state.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n194354[label="DiffMode", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code_review\\diff_state.rs:266", sym_ty="Enum", shape=box];
+        n194855[label="DiffStateModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\code_review\\diff_state.rs:365", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_completer {
+      label="completer";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n213779[label="SessionContext", path="C:\\Users\\zhangqiang\\warp\\app\\src\\completer\\mod.rs:41", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_drive {
+      label="drive";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_index_rs {
+        label="index.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n251812[label="DriveIndexAction", path="C:\\Users\\zhangqiang\\warp\\app\\src\\drive\\index.rs:244", sym_ty="Enum", shape=box];
+        n252014[label="DriveIndex", path="C:\\Users\\zhangqiang\\warp\\app\\src\\drive\\index.rs:514", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n164877[label="WarpDriveItemId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\drive\\items\\mod.rs:77", sym_ty="Enum", shape=box];
+        n199671[label="CloudObjectTypeAndId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\drive\\mod.rs:108", sym_ty="Enum", shape=box];
+        n199202[label="DriveObjectType", path="C:\\Users\\zhangqiang\\warp\\app\\src\\drive\\mod.rs:37", sym_ty="Enum", shape=box];
+        n89198[label="SharingDialog", path="C:\\Users\\zhangqiang\\warp\\app\\src\\drive\\sharing\\dialog\\mod.rs:159", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_editor {
+      label="editor";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_anchor_rs {
+        label="anchor.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n186595[label="Anchor", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\model\\buffer\\anchor.rs:10", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n236478[label="EditorView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\mod.rs:1752", sym_ty="Struct", shape=box];
+        n236105[label="EditorAction", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\mod.rs:981", sym_ty="Enum", shape=box];
+        n192374[label="Buffer", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\model\\buffer\\mod.rs:54", sym_ty="Struct", shape=box];
+        n206957[label="DisplayMap", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\model\\display_map\\mod.rs:20", sym_ty="Struct", shape=box];
+        n209565[label="DisplayPoint", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\model\\display_map\\mod.rs:341", sym_ty="Struct", shape=box];
+        n101467[label="InteractionState", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\model\\mod.rs:119", sym_ty="Enum", shape=box];
+        n103207[label="EditorModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\model\\mod.rs:412", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_time_rs {
+        label="time.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n117108[label="ReplicaId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\editor\\view\\model\\buffer\\time.rs:11", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_env_vars {
+      label="env_vars";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_env_var_collection_rs {
+        label="env_var_collection.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n187925[label="EnvVarCollectionView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\env_vars\\view\\env_var_collection.rs:271", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_input_suggestions_rs {
+      label="input_suggestions.rs";
+      style=rounded;
+            bgcolor="#fafafa";
+
+      n180655[label="Item", path="C:\\Users\\zhangqiang\\warp\\app\\src\\input_suggestions.rs:67", sym_ty="Struct", shape=box];
+    }
+
+    subgraph cluster_lib_rs {
+      label="lib.rs";
+      style=rounded;
+            bgcolor="#fafafa";
+
+      n184156[label="run_internal", path="C:\\Users\\zhangqiang\\warp\\app\\src\\lib.rs:661", sym_ty="Function", shape=ellipse];
+      n185459[label="initialize_app", path="C:\\Users\\zhangqiang\\warp\\app\\src\\lib.rs:960", sym_ty="Function", shape=ellipse];
+    }
+
+    subgraph cluster_menu_rs {
+      label="menu.rs";
+      style=rounded;
+            bgcolor="#fafafa";
+
+      n80224[label="MenuItem", path="C:\\Users\\zhangqiang\\warp\\app\\src\\menu.rs:1247", sym_ty="Enum", shape=box];
+      n76345[label="MenuItemFields", path="C:\\Users\\zhangqiang\\warp\\app\\src\\menu.rs:390", sym_ty="Struct", shape=box];
+      n74583[label="Menu", path="C:\\Users\\zhangqiang\\warp\\app\\src\\menu.rs:81", sym_ty="Struct", shape=box];
+    }
+
+    subgraph cluster_notebooks {
+      label="notebooks";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_link_rs {
+        label="link.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n221310[label="LinkTarget", path="C:\\Users\\zhangqiang\\warp\\app\\src\\notebooks\\link.rs:38", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_link_tests_rs {
+        label="link_tests.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n2189[label="url", path="C:\\Users\\zhangqiang\\warp\\app\\src\\notebooks\\link_tests.rs:23", sym_ty="Function", shape=ellipse];
+      }
+
+      subgraph cluster_model_rs {
+        label="model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n41292[label="NotebooksEditorModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\notebooks\\editor\\model.rs:100", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_notebook_rs {
+        label="notebook.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n144259[label="NotebookView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\notebooks\\notebook.rs:235", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_view_rs {
+        label="view.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n43670[label="EditorViewAction", path="C:\\Users\\zhangqiang\\warp\\app\\src\\notebooks\\editor\\view.rs:747", sym_ty="Enum", shape=box];
+      }
+
+    }
+
+    subgraph cluster_pane_group {
+      label="pane_group";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_focus_state_rs {
+        label="focus_state.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n152067[label="PaneFocusHandle", path="C:\\Users\\zhangqiang\\warp\\app\\src\\pane_group\\focus_state.rs:159", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n243444[label="Event", path="C:\\Users\\zhangqiang\\warp\\app\\src\\pane_group\\mod.rs:472", sym_ty="Enum", shape=box];
+        n243687[label="PaneGroup", path="C:\\Users\\zhangqiang\\warp\\app\\src\\pane_group\\mod.rs:832", sym_ty="Struct", shape=box];
+        n30677[label="PaneEvent", path="C:\\Users\\zhangqiang\\warp\\app\\src\\pane_group\\pane\\mod.rs:1089", sym_ty="Enum", shape=box];
+        n27825[label="PaneConfiguration", path="C:\\Users\\zhangqiang\\warp\\app\\src\\pane_group\\pane\\mod.rs:688", sym_ty="Struct", shape=box];
+        n23193[label="PaneId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\pane_group\\pane\\mod.rs:86", sym_ty="Struct", shape=box];
+        n23248[label="TerminalPaneId", path="C:\\Users\\zhangqiang\\warp\\app\\src\\pane_group\\pane\\mod.rs:99", sym_ty="Struct", shape=box];
+        n223292[label="PaneView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\pane_group\\pane\\view\\mod.rs:78", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_persistence {
+      label="persistence";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n13813[label="ModelEvent", path="C:\\Users\\zhangqiang\\warp\\app\\src\\persistence\\mod.rs:235", sym_ty="Enum", shape=box];
+        n12854[label="remove", path="C:\\Users\\zhangqiang\\warp\\app\\src\\persistence\\mod.rs:86", sym_ty="Function", shape=ellipse];
+      }
+
+    }
+
+    subgraph cluster_search {
+      label="search";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_data_source_rs {
+        label="data_source.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n87004[label="QueryFilter", path="C:\\Users\\zhangqiang\\warp\\app\\src\\search\\data_source.rs:145", sym_ty="Enum", shape=box];
+        n88355[label="Query", path="C:\\Users\\zhangqiang\\warp\\app\\src\\search\\data_source.rs:372", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_view_rs {
+        label="view.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n42294[label="View", path="C:\\Users\\zhangqiang\\warp\\app\\src\\search\\command_palette\\view.rs:126", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_server {
+      label="server";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_ai_rs {
+        label="ai.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n162910[label="AIClient", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\server_api\\ai.rs:731", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_auth_rs {
+        label="auth.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n149930[label="AuthClient", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\server_api\\auth.rs:120", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_events_rs {
+        label="events.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n239343[label="TelemetryEvent", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\telemetry\\events.rs:1234", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n191032[label="ServerExperiment", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\experiments\\mod.rs:30", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_object_rs {
+        label="object.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n209890[label="ObjectClient", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\server_api\\object.rs:170", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_server_api_rs {
+        label="server_api.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n55516[label="ServerApi", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\server_api.rs:374", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_sync_queue_rs {
+        label="sync_queue.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n157059[label="QueueItem", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\sync_queue.rs:142", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_team_rs {
+        label="team.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n144048[label="TeamClient", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\server_api\\team.rs:73", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_update_manager_rs {
+        label="update_manager.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n25024[label="UpdateManager", path="C:\\Users\\zhangqiang\\warp\\app\\src\\server\\cloud_objects\\update_manager.rs:204", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_settings_view {
+      label="settings_view";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_ai_page_rs {
+        label="ai_page.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n248451[label="AISettingsPageAction", path="C:\\Users\\zhangqiang\\warp\\app\\src\\settings_view\\ai_page.rs:2055", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_appearance_page_rs {
+        label="appearance_page.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n42047[label="AppearanceSettingsPageView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\settings_view\\appearance_page.rs:476", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n164722[label="SettingsSection", path="C:\\Users\\zhangqiang\\warp\\app\\src\\settings_view\\mod.rs:188", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_teams_page_rs {
+        label="teams_page.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n69077[label="TeamsPageView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\settings_view\\teams_page.rs:428", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_update_environment_form_rs {
+        label="update_environment_form.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n24848[label="UpdateEnvironmentForm", path="C:\\Users\\zhangqiang\\warp\\app\\src\\settings_view\\update_environment_form.rs:277", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_terminal {
+      label="terminal";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_action_rs {
+        label="action.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n20244[label="TerminalAction", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\view\\action.rs:109", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_active_session_rs {
+        label="active_session.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n150734[label="ActiveSession", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\session\\active_session.rs:16", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_alt_screen_rs {
+        label="alt_screen.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n68348[label="AltScreen", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\alt_screen.rs:40", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_api_rs {
+        label="api.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n184612[label="Result", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\local_tty\\server\\api.rs:6", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_available_shells_rs {
+        label="available_shells.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n91380[label="AvailableShell", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\available_shells.rs:102", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_block_rs {
+        label="block.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n79802[label="Block", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\block.rs:286", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_block_list_viewport_rs {
+        label="block_list_viewport.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n16636[label="ScrollPosition", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\block_list_viewport.rs:143", sym_ty="Enum", shape=box];
+        n17450[label="ViewportIter", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\block_list_viewport.rs:344", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_blockgrid_rs {
+        label="blockgrid.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n217225[label="BlockGrid", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\blockgrid.rs:33", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_blocks_rs {
+        label="blocks.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n148920[label="BlockList", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\blocks.rs:239", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_cli_agent_rs {
+        label="cli_agent.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n100859[label="CLIAgent", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\cli_agent.rs:108", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_command_executor_rs {
+        label="command_executor.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n151351[label="CommandExecutor", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\session\\command_executor.rs:67", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_dcs_hooks_rs {
+        label="dcs_hooks.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n120252[label="DProtoHook", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\ansi\\dcs_hooks.rs:30", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_early_output_rs {
+        label="early_output.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n20919[label="EarlyOutputHandler", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\early_output.rs:245", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_event_listener_rs {
+        label="event_listener.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n176515[label="ChannelEventListener", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\event_listener.rs:10", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_grid_handler_rs {
+        label="grid_handler.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n105600[label="GridHandler", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\grid\\grid_handler.rs:307", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_grid_storage_rs {
+        label="grid_storage.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n54262[label="Cursor", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\grid\\grid_storage.rs:27", sym_ty="Struct", shape=box];
+        n54528[label="GridStorage", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\grid\\grid_storage.rs:79", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_handler_rs {
+        label="handler.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n37120[label="Handler", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\ansi\\handler.rs:27", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_header_grid_rs {
+        label="header_grid.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n95595[label="HeaderGrid", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\header_grid.rs:113", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_input_rs {
+        label="input.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n232367[label="MenuPositioningProvider", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\input.rs:1367", sym_ty="Trait", shape=box];
+        n232424[label="Input", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\input.rs:1486", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_link_detection_rs {
+        label="link_detection.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n65823[label="GridHighlightedLink", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\view\\link_detection.rs:48", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_mio_channel_rs {
+        label="mio_channel.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n153625[label="Sender", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\local_tty\\mio_channel.rs:83", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_mod_rs {
+        label="mod.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n28606[label="SizeInfo", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\mod.rs:290", sym_ty="Struct", shape=box];
+        n101723[label="SharedSessionStatus", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\shared_session\\mod.rs:63", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_mod_test_rs {
+        label="mod_test.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n129184[label="MockHandler", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\ansi\\mod_test.rs:15", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_model_rs {
+        label="model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n86599[label="Status", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\view\\ambient_agent\\model.rs:51", sym_ty="Enum", shape=box];
+        n86708[label="AmbientAgentViewModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\view\\ambient_agent\\model.rs:78", sym_ty="Struct", shape=box];
+        n165079[label="Error", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\wsl\\model.rs:113", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_model_events_rs {
+        label="model_events.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n51025[label="ModelEvent", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model_events.rs:382", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_secrets_rs {
+        label="secrets.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n79706[label="ObfuscateSecrets", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\secrets.rs:123", sym_ty="Enum", shape=box];
+        n79306[label="SecretHandle", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\secrets.rs:54", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_session_rs {
+        label="session.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n167841[label="Sessions", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\session.rs:78", sym_ty="Struct", shape=box];
+        n171627[label="Session", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\session.rs:847", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_suggestions_mode_model_rs {
+        label="suggestions_mode_model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n139860[label="InputSuggestionsModeModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\input\\suggestions_mode_model.rs:10", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_terminal_model_rs {
+        label="terminal_model.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n1828[label="WithinModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\terminal_model.rs:157", sym_ty="Enum", shape=box];
+        n2479[label="WithinBlock", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\terminal_model.rs:236", sym_ty="Struct", shape=box];
+        n3914[label="TerminalModel", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\model\\terminal_model.rs:453", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_view_rs {
+        label="view.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n8784[label="Event", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\view.rs:1649", sym_ty="Enum", shape=box];
+        n12678[label="TerminalView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\terminal\\view.rs:2383", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_themes {
+      label="themes";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_theme_rs {
+        label="theme.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n161664[label="ThemeKind", path="C:\\Users\\zhangqiang\\warp\\app\\src\\themes\\theme.rs:42", sym_ty="Enum", shape=box];
+      }
+
+    }
+
+    subgraph cluster_util {
+      label="util";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_meta_rs {
+        label="meta.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n156028[label="Spanned", path="C:\\Users\\zhangqiang\\warp\\app\\src\\util\\meta.rs:118", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_view_components {
+      label="view_components";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_action_button_rs {
+        label="action_button.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n178455[label="ActionButton", path="C:\\Users\\zhangqiang\\warp\\app\\src\\view_components\\action_button.rs:39", sym_ty="Struct", shape=box];
+        n178738[label="ActionButtonTheme", path="C:\\Users\\zhangqiang\\warp\\app\\src\\view_components\\action_button.rs:98", sym_ty="Trait", shape=box];
+      }
+
+      subgraph cluster_dropdown_rs {
+        label="dropdown.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n136028[label="Dropdown", path="C:\\Users\\zhangqiang\\warp\\app\\src\\view_components\\dropdown.rs:66", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_filterable_dropdown_rs {
+        label="filterable_dropdown.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n106046[label="FilterableDropdown", path="C:\\Users\\zhangqiang\\warp\\app\\src\\view_components\\filterable_dropdown.rs:45", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_workflows {
+      label="workflows";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_workflow_rs {
+        label="workflow.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n27831[label="Workflow", path="C:\\Users\\zhangqiang\\warp\\app\\src\\workflows\\workflow.rs:14", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_workflow_view_rs {
+        label="workflow_view.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n118770[label="WorkflowView", path="C:\\Users\\zhangqiang\\warp\\app\\src\\workflows\\workflow_view.rs:300", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_workspace {
+      label="workspace";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_action_rs {
+        label="action.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n162640[label="WorkspaceAction", path="C:\\Users\\zhangqiang\\warp\\app\\src\\workspace\\action.rs:99", sym_ty="Enum", shape=box];
+      }
+
+      subgraph cluster_view_rs {
+        label="view.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n136148[label="Workspace", path="C:\\Users\\zhangqiang\\warp\\app\\src\\workspace\\view.rs:889", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+    subgraph cluster_workspaces {
+      label="workspaces";
+      style=rounded;
+            bgcolor="#f5f5f5";
+
+      subgraph cluster_team_rs {
+        label="team.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n122169[label="Team", path="C:\\Users\\zhangqiang\\warp\\app\\src\\workspaces\\team.rs:78", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_user_workspaces_rs {
+        label="user_workspaces.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n150494[label="UserWorkspacesEvent", path="C:\\Users\\zhangqiang\\warp\\app\\src\\workspaces\\user_workspaces.rs:53", sym_ty="Enum", shape=box];
+        n150878[label="UserWorkspaces", path="C:\\Users\\zhangqiang\\warp\\app\\src\\workspaces\\user_workspaces.rs:96", sym_ty="Struct", shape=box];
+      }
+
+      subgraph cluster_workspace_rs {
+        label="workspace.rs";
+        style=rounded;
+                bgcolor="#fafafa";
+
+        n182599[label="Workspace", path="C:\\Users\\zhangqiang\\warp\\app\\src\\workspaces\\workspace.rs:33", sym_ty="Struct", shape=box];
+      }
+
+    }
+
+  }
+
+
+  n1237 -> n94906 [from="type_dep", to="struct"];
+  n1237 -> n205201 [from="type_arg", to="impl"];
+  n1828 -> n12678 [from="type_dep", to="struct"];
+  n1828 -> n20244 [from="field_type", to="enum"];
+  n1828 -> n65823 [from="field_type", to="enum"];
+  n2189 -> n221310 [from="func", to="output"];
+  n2479 -> n1828 [from="field_type", to="enum"];
+  n2479 -> n148920 [from="type_dep", to="struct"];
+  n3914 -> n12678 [from="type_dep", to="struct"];
+  n3914 -> n106831 [from="type_dep", to="struct"];
+  n3914 -> n124178 [from="type_dep", to="struct"];
+  n3914 -> n152944 [from="type_dep", to="struct"];
+  n3914 -> n232424 [from="type_dep", to="struct"];
+  n3914 -> n249979 [from="type_dep", to="struct"];
+  n12678 -> n241075 [from="field_type", to="struct"];
+  n12678 -> n249979 [from="field_type", to="struct"];
+  n13813 -> n12854 [from="input", to="func"];
+  n13813 -> n25024 [from="type_dep", to="struct"];
+  n13813 -> n203294 [from="type_dep", to="struct"];
+  n13813 -> n243687 [from="type_dep", to="struct"];
+  n16636 -> n12678 [from="field_type", to="struct"];
+  n20244 -> n12678 [from="type_dep", to="struct"];
+  n23193 -> n30677 [from="field_type", to="enum"];
+  n23193 -> n138076 [from="type_dep", to="struct"];
+  n23193 -> n152067 [from="field_type", to="struct"];
+  n23193 -> n223292 [from="field_type", to="struct"];
+  n23193 -> n241075 [from="type_dep", to="struct"];
+  n23193 -> n243444 [from="field_type", to="enum"];
+  n23193 -> n243687 [from="type_dep", to="struct"];
+  n23248 -> n23193 [from="type_arg", to="impl"];
+  n23248 -> n243444 [from="field_type", to="enum"];
+  n23248 -> n243687 [from="type_dep", to="struct"];
+  n27825 -> n12678 [from="type_dep", to="struct"];
+  n27825 -> n144259 [from="type_dep", to="struct"];
+  n27825 -> n187925 [from="type_dep", to="struct"];
+  n27825 -> n223292 [from="type_dep", to="struct"];
+  n27831 -> n20244 [from="field_type", to="enum"];
+  n28150 -> n105874 [from="type_dep", to="struct"];
+  n28150 -> n123578 [from="type_dep", to="struct"];
+  n28150 -> n162640 [from="field_type", to="enum"];
+  n28150 -> n239343 [from="field_type", to="enum"];
+  n28606 -> n12678 [from="type_dep", to="struct"];
+  n28606 -> n79802 [from="field_type", to="struct"];
+  n28606 -> n148920 [from="field_type", to="struct"];
+  n30677 -> n8784 [from="field_type", to="enum"];
+  n37120 -> n129184 [from="trait", to="impl"];
+  n39610 -> n123578 [from="type_dep", to="struct"];
+  n42294 -> n1237 [from="trait", to="impl"];
+  n42294 -> n12678 [from="trait", to="impl"];
+  n42294 -> n24848 [from="trait", to="impl"];
+  n42294 -> n42047 [from="trait", to="impl"];
+  n42294 -> n69077 [from="trait", to="impl"];
+  n42294 -> n74583 [from="trait", to="impl"];
+  n42294 -> n89198 [from="trait", to="impl"];
+  n42294 -> n94906 [from="trait", to="impl"];
+  n42294 -> n106046 [from="trait", to="impl"];
+  n42294 -> n118770 [from="trait", to="impl"];
+  n42294 -> n120443 [from="trait", to="impl"];
+  n42294 -> n136028 [from="trait", to="impl"];
+  n42294 -> n136148 [from="trait", to="impl"];
+  n42294 -> n138076 [from="trait", to="impl"];
+  n42294 -> n144259 [from="trait", to="impl"];
+  n42294 -> n178455 [from="trait", to="impl"];
+  n42294 -> n187925 [from="trait", to="impl"];
+  n42294 -> n223292 [from="trait", to="impl"];
+  n42294 -> n232424 [from="trait", to="impl"];
+  n42294 -> n236478 [from="trait", to="impl"];
+  n42294 -> n241075 [from="trait", to="impl"];
+  n42294 -> n243687 [from="trait", to="impl"];
+  n42294 -> n252014 [from="trait", to="impl"];
+  n45580 -> n85634 [from="field_type", to="enum"];
+  n45580 -> n88881 [from="type_dep", to="struct"];
+  n45580 -> n123578 [from="type_dep", to="struct"];
+  n45580 -> n138076 [from="field_type", to="struct"];
+  n45580 -> n239343 [from="field_type", to="enum"];
+  n45580 -> n249979 [from="type_dep", to="struct"];
+  n46316 -> n12678 [from="type_dep", to="struct"];
+  n46316 -> n55516 [from="type_dep", to="struct"];
+  n46316 -> n69077 [from="type_dep", to="struct"];
+  n46316 -> n118770 [from="type_dep", to="struct"];
+  n46316 -> n136148 [from="type_dep", to="struct"];
+  n46316 -> n252014 [from="type_dep", to="struct"];
+  n51025 -> n136148 [from="type_dep", to="struct"];
+  n54262 -> n54528 [from="field_type", to="struct"];
+  n54262 -> n162640 [from="field_type", to="enum"];
+  n54528 -> n105600 [from="field_type", to="struct"];
+  n55516 -> n12678 [from="type_dep", to="struct"];
+  n55516 -> n136148 [from="type_dep", to="struct"];
+  n55516 -> n232424 [from="type_dep", to="struct"];
+  n55516 -> n243687 [from="type_dep", to="struct"];
+  n58289 -> n20244 [from="field_type", to="enum"];
+  n58289 -> n58456 [from="field_type", to="struct"];
+  n58289 -> n123578 [from="type_dep", to="struct"];
+  n58289 -> n162640 [from="field_type", to="enum"];
+  n58289 -> n239343 [from="field_type", to="enum"];
+  n58456 -> n140188 [from="type_dep", to="struct"];
+  n65823 -> n2479 [from="type_arg", to="impl"];
+  n65823 -> n12678 [from="type_dep", to="struct"];
+  n65823 -> n20244 [from="field_type", to="enum"];
+  n65823 -> n239343 [from="field_type", to="enum"];
+  n68348 -> n3914 [from="field_type", to="struct"];
+  n74583 -> n12678 [from="type_dep", to="struct"];
+  n74583 -> n69077 [from="type_dep", to="struct"];
+  n74583 -> n89198 [from="type_dep", to="struct"];
+  n74583 -> n94906 [from="type_dep", to="struct"];
+  n74583 -> n106046 [from="type_dep", to="struct"];
+  n74583 -> n120443 [from="type_dep", to="struct"];
+  n74583 -> n136028 [from="type_dep", to="struct"];
+  n74583 -> n136148 [from="type_dep", to="struct"];
+  n74583 -> n138076 [from="type_dep", to="struct"];
+  n74583 -> n241075 [from="type_dep", to="struct"];
+  n74583 -> n252014 [from="type_dep", to="struct"];
+  n74870 -> n249979 [from="bound", to="generic"];
+  n74870 -> n249979 [from="field_type", to="struct"];
+  n76345 -> n80224 [from="field_type", to="enum"];
+  n79306 -> n12678 [from="type_dep", to="struct"];
+  n79306 -> n20244 [from="field_type", to="enum"];
+  n79306 -> n105600 [from="type_dep", to="struct"];
+  n79706 -> n3914 [from="field_type", to="struct"];
+  n79706 -> n105600 [from="field_type", to="struct"];
+  n79706 -> n148920 [from="field_type", to="struct"];
+  n79706 -> n217225 [from="field_type", to="struct"];
+  n79802 -> n148920 [from="type_dep", to="struct"];
+  n82673 -> n13813 [from="field_type", to="enum"];
+  n85634 -> n8784 [from="field_type", to="enum"];
+  n85634 -> n239343 [from="field_type", to="enum"];
+  n85634 -> n243444 [from="field_type", to="enum"];
+  n86599 -> n86708 [from="field_type", to="struct"];
+  n86708 -> n124178 [from="type_dep", to="struct"];
+  n86708 -> n232424 [from="type_dep", to="struct"];
+  n86708 -> n249979 [from="type_dep", to="struct"];
+  n87004 -> n88355 [from="type_dep", to="struct"];
+  n87004 -> n239343 [from="field_type", to="enum"];
+  n88393 -> n1237 [from="type_dep", to="struct"];
+  n88881 -> n12678 [from="type_dep", to="struct"];
+  n88881 -> n152944 [from="type_dep", to="struct"];
+  n88881 -> n232424 [from="type_dep", to="struct"];
+  n88881 -> n249979 [from="type_dep", to="struct"];
+  n89198 -> n252014 [from="type_dep", to="struct"];
+  n91380 -> n162640 [from="field_type", to="enum"];
+  n95595 -> n79802 [from="field_type", to="struct"];
+  n100859 -> n8784 [from="field_type", to="enum"];
+  n100859 -> n243444 [from="field_type", to="enum"];
+  n100859 -> n248451 [from="field_type", to="enum"];
+  n101467 -> n41292 [from="field_type", to="struct"];
+  n101467 -> n88393 [from="field_type", to="struct"];
+  n101467 -> n103207 [from="field_type", to="struct"];
+  n101467 -> n236478 [from="type_dep", to="struct"];
+  n101723 -> n3914 [from="field_type", to="struct"];
+  n103207 -> n236478 [from="type_dep", to="struct"];
+  n105600 -> n68348 [from="field_type", to="struct"];
+  n105600 -> n217225 [from="field_type", to="struct"];
+  n106046 -> n42047 [from="type_dep", to="struct"];
+  n106831 -> n12678 [from="type_dep", to="struct"];
+  n106831 -> n152944 [from="type_dep", to="struct"];
+  n106831 -> n232424 [from="type_dep", to="struct"];
+  n106831 -> n236478 [from="type_dep", to="struct"];
+  n106831 -> n249979 [from="type_dep", to="struct"];
+  n117108 -> n192374 [from="type_dep", to="struct"];
+  n120252 -> n129184 [from="type_dep", to="struct"];
+  n122169 -> n182599 [from="type_dep", to="struct"];
+  n123169 -> n123661 [from="field_type", to="enum"];
+  n123578 -> n105874 [from="type_dep", to="struct"];
+  n123661 -> n17450 [from="field_type", to="struct"];
+  n123661 -> n124178 [from="field_type", to="struct"];
+  n123661 -> n148920 [from="field_type", to="struct"];
+  n124178 -> n12678 [from="type_dep", to="struct"];
+  n124178 -> n106831 [from="type_dep", to="struct"];
+  n124178 -> n232424 [from="type_dep", to="struct"];
+  n124178 -> n249979 [from="type_dep", to="struct"];
+  n136028 -> n42047 [from="type_dep", to="struct"];
+  n136028 -> n252014 [from="type_dep", to="struct"];
+  n136148 -> n150878 [from="type_dep", to="struct"];
+  n137807 -> n243444 [from="field_type", to="enum"];
+  n137978 -> n1237 [from="bound", to="generic"];
+  n137978 -> n1237 [from="field_type", to="struct"];
+  n138076 -> n8784 [from="field_type", to="enum"];
+  n138076 -> n243444 [from="field_type", to="enum"];
+  n138087 -> n1237 [from="bound", to="generic"];
+  n138087 -> n1237 [from="field_type", to="struct"];
+  n139409 -> n123578 [from="type_dep", to="struct"];
+  n139409 -> n140188 [from="field_type", to="struct"];
+  n139860 -> n232424 [from="type_dep", to="struct"];
+  n142013 -> n8784 [from="field_type", to="enum"];
+  n142013 -> n20244 [from="field_type", to="enum"];
+  n142013 -> n61909 [from="field_type", to="struct"];
+  n142013 -> n86708 [from="type_dep", to="struct"];
+  n142013 -> n88881 [from="type_dep", to="struct"];
+  n142013 -> n105874 [from="type_dep", to="struct"];
+  n142013 -> n123578 [from="type_dep", to="struct"];
+  n142013 -> n123661 [from="field_type", to="enum"];
+  n142013 -> n152944 [from="type_dep", to="struct"];
+  n142013 -> n162640 [from="field_type", to="enum"];
+  n142013 -> n239343 [from="field_type", to="enum"];
+  n142013 -> n243687 [from="type_dep", to="struct"];
+  n142894 -> n123578 [from="field_type", to="struct"];
+  n144048 -> n55516 [from="trait", to="impl"];
+  n144048 -> n150878 [from="bound", to="generic"];
+  n144048 -> n150878 [from="field_type", to="struct"];
+  n148920 -> n3914 [from="field_type", to="struct"];
+  n148920 -> n20919 [from="field_type", to="struct"];
+  n149930 -> n55516 [from="trait", to="impl"];
+  n150734 -> n12678 [from="type_dep", to="struct"];
+  n150878 -> n69077 [from="type_dep", to="struct"];
+  n151351 -> n167841 [from="bound", to="generic"];
+  n151351 -> n167841 [from="field_type", to="struct"];
+  n151351 -> n171627 [from="bound", to="generic"];
+  n151351 -> n171627 [from="field_type", to="struct"];
+  n152067 -> n12678 [from="type_dep", to="struct"];
+  n152067 -> n118770 [from="type_dep", to="struct"];
+  n152067 -> n138076 [from="type_dep", to="struct"];
+  n152067 -> n144259 [from="type_dep", to="struct"];
+  n152067 -> n187925 [from="type_dep", to="struct"];
+  n152067 -> n223292 [from="type_dep", to="struct"];
+  n152067 -> n232424 [from="type_dep", to="struct"];
+  n152067 -> n241075 [from="type_dep", to="struct"];
+  n152944 -> n12678 [from="type_dep", to="struct"];
+  n152944 -> n232424 [from="type_dep", to="struct"];
+  n152944 -> n249979 [from="type_dep", to="struct"];
+  n153625 -> n3914 [from="type_dep", to="struct"];
+  n153625 -> n12678 [from="field_type", to="struct"];
+  n153625 -> n144259 [from="field_type", to="struct"];
+  n153625 -> n167841 [from="type_dep", to="struct"];
+  n153625 -> n176515 [from="field_type", to="struct"];
+  n153625 -> n232424 [from="field_type", to="struct"];
+  n158926 -> n55516 [from="type_dep", to="struct"];
+  n158926 -> n86708 [from="type_dep", to="struct"];
+  n158926 -> n123578 [from="type_dep", to="struct"];
+  n158926 -> n152944 [from="type_dep", to="struct"];
+  n158926 -> n162640 [from="field_type", to="enum"];
+  n158926 -> n239343 [from="field_type", to="enum"];
+  n158926 -> n243687 [from="type_dep", to="struct"];
+  n161664 -> n136148 [from="type_dep", to="struct"];
+  n162640 -> n136148 [from="type_dep", to="struct"];
+  n162910 -> n55516 [from="trait", to="impl"];
+  n162910 -> n118770 [from="bound", to="generic"];
+  n162910 -> n118770 [from="field_type", to="struct"];
+  n164722 -> n8784 [from="field_type", to="enum"];
+  n164722 -> n162640 [from="field_type", to="enum"];
+  n164722 -> n243444 [from="field_type", to="enum"];
+  n164877 -> n162640 [from="field_type", to="enum"];
+  n164877 -> n243444 [from="field_type", to="enum"];
+  n164877 -> n251812 [from="field_type", to="enum"];
+  n164877 -> n252014 [from="type_dep", to="struct"];
+  n165079 -> n85402 [from="field_type", to="enum"];
+  n165079 -> n150494 [from="field_type", to="enum"];
+  n167841 -> n12678 [from="type_dep", to="struct"];
+  n167841 -> n150734 [from="type_dep", to="struct"];
+  n167841 -> n232424 [from="type_dep", to="struct"];
+  n171252 -> n203294 [from="bound", to="generic"];
+  n171252 -> n203294 [from="field_type", to="struct"];
+  n171627 -> n8784 [from="field_type", to="enum"];
+  n171627 -> n167841 [from="type_dep", to="struct"];
+  n171627 -> n213779 [from="type_dep", to="struct"];
+  n171627 -> n221310 [from="field_type", to="enum"];
+  n171627 -> n243444 [from="field_type", to="enum"];
+  n176515 -> n3914 [from="field_type", to="struct"];
+  n176515 -> n68348 [from="field_type", to="struct"];
+  n176515 -> n79802 [from="field_type", to="struct"];
+  n176515 -> n95595 [from="field_type", to="struct"];
+  n176515 -> n148920 [from="field_type", to="struct"];
+  n178364 -> n205201 [from="field_type", to="enum"];
+  n178455 -> n12678 [from="type_dep", to="struct"];
+  n178455 -> n24848 [from="type_dep", to="struct"];
+  n178455 -> n42047 [from="type_dep", to="struct"];
+  n178455 -> n136148 [from="type_dep", to="struct"];
+  n178455 -> n138076 [from="type_dep", to="struct"];
+  n178455 -> n241075 [from="type_dep", to="struct"];
+  n178455 -> n249979 [from="type_dep", to="struct"];
+  n178738 -> n178455 [from="bound", to="generic"];
+  n178738 -> n178455 [from="field_type", to="struct"];
+  n180655 -> n185459 [from="input", to="func"];
+  n181079 -> n164877 [from="field_type", to="enum"];
+  n181079 -> n243444 [from="field_type", to="enum"];
+  n181079 -> n251812 [from="field_type", to="enum"];
+  n181079 -> n252014 [from="type_dep", to="struct"];
+  n184156 -> n184612 [from="func", to="output"];
+  n185459 -> n156028 [from="func", to="type_dep"];
+  n185459 -> n165079 [from="func", to="type_dep"];
+  n186595 -> n43670 [from="field_type", to="enum"];
+  n186595 -> n103207 [from="type_dep", to="struct"];
+  n191032 -> n13813 [from="field_type", to="enum"];
+  n192374 -> n41292 [from="type_dep", to="struct"];
+  n192374 -> n88393 [from="type_dep", to="struct"];
+  n192374 -> n206957 [from="type_dep", to="struct"];
+  n194354 -> n8784 [from="field_type", to="enum"];
+  n194354 -> n194855 [from="field_type", to="struct"];
+  n194354 -> n243444 [from="field_type", to="enum"];
+  n194855 -> n241075 [from="type_dep", to="struct"];
+  n199202 -> n251812 [from="field_type", to="enum"];
+  n199671 -> n157059 [from="field_type", to="enum"];
+  n199671 -> n162640 [from="field_type", to="enum"];
+  n199671 -> n164877 [from="field_type", to="enum"];
+  n199671 -> n243444 [from="field_type", to="enum"];
+  n199671 -> n251812 [from="field_type", to="enum"];
+  n201338 -> n201508 [from="field_type", to="struct"];
+  n201338 -> n205201 [from="field_type", to="enum"];
+  n201338 -> n241075 [from="type_dep", to="struct"];
+  n201338 -> n249979 [from="type_dep", to="struct"];
+  n201508 -> n8784 [from="field_type", to="enum"];
+  n201508 -> n243444 [from="field_type", to="enum"];
+  n203294 -> n69077 [from="type_dep", to="struct"];
+  n203805 -> n8784 [from="field_type", to="enum"];
+  n203805 -> n243444 [from="field_type", to="enum"];
+  n203805 -> n248451 [from="field_type", to="enum"];
+  n209565 -> n54262 [from="type_arg", to="generic"];
+  n209565 -> n236105 [from="field_type", to="enum"];
+  n209890 -> n25024 [from="bound", to="generic"];
+  n209890 -> n25024 [from="field_type", to="struct"];
+  n209890 -> n55516 [from="trait", to="impl"];
+  n213561 -> n139860 [from="field_type", to="struct"];
+  n217225 -> n79802 [from="field_type", to="struct"];
+  n217225 -> n95595 [from="field_type", to="struct"];
+  n221310 -> n162640 [from="field_type", to="enum"];
+  n223292 -> n12678 [from="base", to="extends"];
+  n223292 -> n12678 [from="type_arg", to="generic"];
+  n223292 -> n241075 [from="type_arg", to="impl"];
+  n223292 -> n249979 [from="type_arg", to="impl"];
+  n232367 -> n178455 [from="bound", to="generic"];
+  n232367 -> n178455 [from="field_type", to="struct"];
+  n232367 -> n232424 [from="bound", to="generic"];
+  n232367 -> n232424 [from="field_type", to="struct"];
+  n232424 -> n12678 [from="type_dep", to="struct"];
+  n236478 -> n1237 [from="trait", to="impl"];
+  n236478 -> n24848 [from="type_dep", to="struct"];
+  n236478 -> n42047 [from="type_dep", to="struct"];
+  n236478 -> n69077 [from="type_dep", to="struct"];
+  n236478 -> n106046 [from="type_dep", to="struct"];
+  n236478 -> n118770 [from="type_dep", to="struct"];
+  n236478 -> n120443 [from="type_dep", to="struct"];
+  n236478 -> n136148 [from="type_dep", to="struct"];
+  n236478 -> n144259 [from="type_arg", to="impl"];
+  n236478 -> n187925 [from="type_dep", to="struct"];
+  n236478 -> n232424 [from="type_dep", to="struct"];
+  n243687 -> n162640 [from="field_type", to="enum"];
+  n251812 -> n252014 [from="type_dep", to="struct"];
+}
